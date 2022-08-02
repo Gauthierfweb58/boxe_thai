@@ -23,11 +23,13 @@ ul {
     width: 100%;
     padding: 10px;
     text-align: center;
-    margin-left:-2px;
+    margin-left:10px;
+    
   }
   .combattant_1{
-    margin-right: 200px;
+   
     padding-top:40px;
+    padding-left:10px;
   }
   .combattant_2{
     padding-top: 40px;
@@ -41,7 +43,17 @@ ul {
     color:white;
     background-color: black;
   }
-  
+  .gagne{
+    
+   margin-top: 70px;
+   margin-right: 70px;
+
+}
+.perdu{
+    margin-top: 70px;
+    margin-left: 150px;
+    
+}
 
 @import "font.css";
 
@@ -212,3 +224,4 @@ nav{
     width: 100%;
     height: 800px;
 }
+
