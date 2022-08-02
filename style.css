@@ -1,0 +1,43 @@
+
+
+
+#section_2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.combat_1{
+    display: flex;   
+}
+ul {
+    list-style-type: none;
+    line-height : 30px;
+  }
+
+  .classe{
+    list-style-type: none;
+    border: solid 2px white;
+    border-radius: 15px;
+    height: fit-content;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin-left:-2px;
+  }
+  .combattant_1{
+    margin-right: 200px;
+    padding-top:40px;
+  }
+  .combattant_2{
+    padding-top: 40px;
+  }
+  .combat_3{
+    display: block;
+    border: 5px solid black;
+    border-radius:20px;
+    width: fit-content;
+    padding-right: 20px;
+    color:white;
+    background-color: black;
+  }
+  
