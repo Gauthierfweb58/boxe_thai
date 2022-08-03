@@ -13,11 +13,3 @@ function menu1(){
     document.getElementById('menu1').style.transition = "250ms";
     document.getElementById('nav').style.left = "-600px";
 }
-
-function gauche(){
-
-}
-
-function droite(){
-    
-}

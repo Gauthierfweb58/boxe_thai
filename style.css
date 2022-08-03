@@ -56,7 +56,7 @@ nav{
 .sous{
     display: none;
     position: absolute;
-    background-color: rgba(34, 34, 34, 0.281);
+    background-color: rgba(34, 34, 34, 0.708);
     border-radius: 10px;
 }
 nav>ul{
@@ -142,34 +142,91 @@ nav>ul li:hover .sous{
     }
 }
 /*******************************************Section1****************************************/
-#section_1{
-    background: url(images/wallpaper2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: top;
-    width: 100%;
-    height: 800px;
+#destination {
     display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
+  .photos_destination {
+    position: absolute;
+    top: 0;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    width: 100%;
+  }
+  .photos_destination img {
+    height: 100%;
+    width: 100%;
+  }
+.photos_destination img:hover{
+    cursor: url(/images/pause.svg), e-resize;
 }
-#gauche{
-    width: 50%;
-    height: 800px;
-    cursor: url(/images/flecheGauche.svg), e-resize;
-}
-#droite{
-    width: 50%;
-    height: 800px;
-    cursor: url(/images/flecheDroite.svg), e-resize;
-}
+  #img_factice {
+    visibility: hidden;
+    position: relative;
+  }
+  
+  @keyframes defilement {
+    from {
+      visibility: hidden;
+      transform: translateX(50%);
+      opacity: 0%;
+    }
+  
+    1% {
+      visibility: visible;
+      transform: translateX(50%);
+      opacity: 0%;
+    }
+  
+    15% {
+      visibility: visible;
+      transform: translate(0);
+      opacity: 100%;
+    }
+  
+    84% {
+      visibility: visible;
+      transform: translate(0);
+      opacity: 100%;
+    }
+  
+    98% {
+      visibility: visible;
+      transform: translateX(-50%);
+      opacity: 0%;
+    }
+    to {
+      transform: translateX(-50%);
+      visibility: hidden;
+      opacity: 0%;
+    }
+  }
+  
+  @keyframes progressBar {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
 /********************************************Section2*****************************************/
+.dernierCbt{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
 #section_2{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
     justify-items: center;
 }
 .combat_1{
-    display: flex;   
+    display: flex;
 }
 ul {
     list-style-type: none;
