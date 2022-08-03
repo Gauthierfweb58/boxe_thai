@@ -10,10 +10,10 @@
 <body>
     <script src="script.js"></script>
 <header>
-    <input type="checkbox" id="Checkbox" onclick="bulleDisparition()"> 
-    <img id="menu" class="menu" src="images/burger.svg" alt="menu" height="30px">
+    <img id="menu" class="menu" src="images/burger.svg" alt="menu" height="30px" onclick="menu()">
+    <img id="menu1" class="menu" src="images/croix.svg" alt="menu" height="30px" onclick="menu1()">
     <a href="index.html"><h1>Boxe Thaï</h1></a>
-    <nav>
+    <nav id="nav">
         <ul>
             <li class="deroulant"><a>Classe A</a>
                 <ul class="sous">
@@ -58,7 +58,8 @@
 
 
 <section id="section_1" class="section_1">
-
+    <div id="gauche" onclick="gauche()"></div>
+    <div id="droite" onclick="droite()"></div>
 </section>
 
 <h1>les derniers combats</h1>
