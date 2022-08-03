@@ -42,12 +42,16 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function() { 
   modal.style.display = "none";
 }*/
-const btn = document.querySelector('.btn')
-const vu = document.getElementsByClassName('vu')
+const btn = document.querySelectorAll('.btn-checkbox')
+/*const vu = document.getElementsByClassName('vu')*/
 
-btn.addEventListener('click', () => { //()=> veut dire fonction nouvelle écriture en javascript
-    vu.classList.toggle("show") //show class déclarée en css // toggle appelle ou enlève au clic donc ici l'image apparait ou disparait
-})
+btn.array.forEach(element => {
+    element.addEventListener('click', (e) => { //()=> veut dire fonction nouvelle écriture en javascript
+        let vumain = this.PannerNode.querySelector(".visible");
+        vumain.classList.remove("vu");
+        vumain.classList.add("show"); //show class déclarée en css // toggle appelle ou enlève au clic donc ici l'image apparait ou disparait
+    })
+});
 
   
 
