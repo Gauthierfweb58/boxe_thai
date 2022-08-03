@@ -358,7 +358,7 @@ nav>ul li:hover .sous{
     height: 100%;
     width: 100%;
   }
-.photos_destination img:hover{
+#destination:hover{
     cursor: url(/images/pause.svg), e-resize;
 }
   #img_factice {
