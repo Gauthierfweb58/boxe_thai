@@ -10,21 +10,56 @@
 <body>
     
 <header>
-    <input type="checkbox" id="Checkbox" onclick="bulleDisparition()" style="display:none"> 
-    <img id="menu" class="menu" src="images/burger.svg" alt="menu" height="30px" style="display:none"></label>
-    <a href="index.php"><h1>Boxe Thaï</h1></a>
-    <nav>
-        <a href="index.php?id_Categorie=1#section_2">Classe A</a>
-        <a href="index.php?id_Categorie=2#section_2">Classe B</a>
-        <a href="index.php?id_Categorie=3#section_2">Classe C</a>
-        <a href="index.php?id_Categorie=4#section_2">Tournois</a>
+    <img id="menu" class="menu" src="images/burger.svg" alt="menu" height="30px" onclick="menu()">
+    <img id="menu1" class="menu" src="images/croix.svg" alt="menu" height="30px" onclick="menu1()">
+    <a href="index.html"><h1>Boxe Thaï</h1></a>
+    <nav id="nav">
+        <ul>
+            <li class="deroulant"><a>Classe A</a>
+                <ul class="sous">
+                    <li><a>Poids moyens</a></li>
+                    <li><a>Poids super-moyens</a></li>
+                    <li><a>Poids mi-lourds</a></li>
+                    <li><a>Poids lourds légers</a></li>
+                    <li><a>Poids lourds</a></li>
+                </ul>
+            </li>
+            <li class="deroulant"><a>Classe B</a>
+                <ul class="sous">
+                    <li><a>Poids moyens</a></li>
+                    <li><a>Poids super-moyens</a></li>
+                    <li><a>Poids mi-lourds</a></li>
+                    <li><a>Poids lourds légers</a></li>
+                    <li><a>Poids lourds</a></li>
+                </ul>
+            </li>
+            <li class="deroulant"><a>Classe C</a>
+                <ul class="sous">
+                    <li><a>Poids moyens</a></li>
+                    <li><a>Poids super-moyens</a></li>
+                    <li><a>Poids mi-lourds</a></li>
+                    <li><a>Poids lourds légers</a></li>
+                    <li><a>Poids lourds</a></li>
+                </ul>
+            </li>
+            <li class="deroulant"><a>Tournois</a>
+                <ul  class="sous">
+                    <li><a>Poids moyens</a></li>
+                    <li><a>Poids super-moyens</a></li>
+                    <li><a>Poids mi-lourds</a></li>
+                    <li><a>Poids lourds légers</a></li>
+                    <li><a>Poids lourds</a></li>
+                </ul>
+            </li>
+        </ul>
     </nav>
 </header>
 
 <!--<div id="blur-around"></div>-->
 
-<section id="section_1">
-
+<section id="section_1" class="section_1">
+    <div id="gauche" onclick="gauche()"></div>
+    <div id="droite" onclick="droite()"></div>
 </section>
 
 <h1>LES DERNIERS COMBATS</h1>
