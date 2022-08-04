@@ -27,7 +27,8 @@ function create_carrousel_main() {
         new_flex.style.justifyContent = "center";
         new_flex.style.position = "absolute";
         new_flex.style.bottom = "70px";
-        new_flex.style.left = "45vw";
+        new_flex.style.left = "50%";
+        new_flex.style.transform = "translate(-50%, -50%)";
         new_flex.style.flexWrap = "wrap";
         let depot = document.getElementById("img_factice");
         depot.insertAdjacentElement("afterend", new_flex);

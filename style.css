@@ -193,9 +193,9 @@ opacity: 0;
     }
   }
 
-
-
-
+  #carrousel_animation_principale:hover{
+    cursor: pointer;
+  }
 
 @import "font.css";
 
@@ -234,23 +234,29 @@ h1{
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
+::-webkit-scrollbar {
+    display: none;
+    }
 a{
     text-decoration: none;
 }
 nav a{
     color: rgb(192, 117, 31);
     text-decoration: none;
-    margin-right: 50px;
     background:transparent;
     border: none;
-    padding-left: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 nav a:hover{
     text-decoration: underline;
     cursor: pointer;
 }
 nav{
-    margin: auto;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .sous{
     display: none;
@@ -284,11 +290,13 @@ nav>ul li:hover .sous{
     header nav {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         position: absolute;
-        left: -600px;
+        left: -800px;
         top: 150px;
         transition: 250ms;
+        width: 80%;
+        font-size: 20px;
     }
     header nav a{
         margin-bottom: 20px;
@@ -303,34 +311,19 @@ nav>ul li:hover .sous{
         position: absolute;
         right:20px;
     }
-}
-/**************************************************checkbox***********************************************************/
-@media screen and (max-width:920px){
-    header>input{
-        position: absolute;
-        margin-top: 25px;
-        margin-left: 15px;
-        z-index: 99;
-    }
     #menu1{
         opacity: 0;
     }
-    header  nav {
-        font-size: 20px;
-        background-color: rgba(43, 43, 43, 0.514);
-        border-radius: 10px;
-        border-style: solid;
+}
+@media screen and (max-width:500px){
+    header nav{
+        font-size: 15px;
     }
 }
 /************************************************section_1***********************************/
 @media screen and (max-width:940px){
     .section_1{
         background-position-x:center !important;
-    }
-}
-@media screen and (max-width:570px){
-    nav a{
-        font-size: 11px;
     }
 }
 /********************************************section_2***************************************/
@@ -460,3 +453,87 @@ ul {
   }
   
 
+/***************************************footer**********************************************************************/
+footer{
+    border-top:dashed;
+    margin-top: 100px;
+    color: rgba(192, 117, 31, 0.795);
+    text-align: center;
+    background: rgb(34, 34, 34);
+    width: 100%;
+}
+.ligne{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#contact{
+    min-width: 380px;
+}
+#contact h3{
+    margin-bottom: 10px;
+}
+#reseaux button {
+    background-color: transparent;
+    border: none;
+    transition: 125ms;
+}
+#logofooter{
+    min-width: 380px;
+}
+footer>div>* {
+    width: 380px;
+    margin: 25px auto;
+}
+
+#reseaux button:hover {
+    transform: scale(1.08);
+    cursor: pointer;
+}
+#reseaux img {
+    width: 80px;
+    transition: 250ms;
+}
+#reseaux{
+    min-width: 380px;
+}
+#reseaux .ligne1{
+    margin-top: 15px;
+    justify-content: center;
+}
+#reseaux button{
+    margin-left: 10px;
+}
+#contacts>div {
+    text-align: left;
+    width: min-content;
+    margin: auto;
+}
+#contacts p {
+    white-space: nowrap;
+}
+footer p, footer a {
+    color: rgb(211, 211, 211);
+    font-family: arial, sans-serif;
+    font-size: 16px;
+    transition: 250ms;
+}
+/*******************************************media queries************************************/
+/********************************************footer*******************************************/
+@media screen and (max-width:1140px){
+    .ligne{
+        grid-template-columns: 1fr 1fr;
+    }
+    #contact{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+@media screen and (max-width:760px){
+    .ligne{
+        grid-template-columns: 1fr;
+    }
+    #logofooter{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}

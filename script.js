@@ -53,12 +53,22 @@ btn.array.forEach(element => {
     })
 });
 
+
+function menu(){
+  document.getElementById('menu').style.opacity = "0";
+  document.getElementById('menu').style.transition = "250ms";
+  document.getElementById('menu1').style.opacity = "1";
+  document.getElementById('menu1').style.transition = "250ms";
+  document.getElementById('nav').style.left = "50%";
+  document.getElementById('nav').style.transform = "translate(-50%, -50%)";
+}
 function menu1(){
     document.getElementById('menu').style.opacity = "1";
     document.getElementById('menu').style.transition = "250ms";
     document.getElementById('menu1').style.opacity = "0";
     document.getElementById('menu1').style.transition = "250ms";
-    document.getElementById('nav').style.left = "-600px";
+    document.getElementById('nav').style.left = "-800px";
+    document.getElementById('nav').style.transform = "translate(0%, 0%)";
 }
 
 var pause = 0;
