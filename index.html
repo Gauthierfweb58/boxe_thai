@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
     <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.js"></script> 
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
     <title>Championnat</title>
 </head>
 <body>
@@ -58,7 +62,7 @@
 </header>
 
 <section id="offres_actuelles" class="section_1">
-        <div id="destination" onclick="play()">
+        <div id="destination" onclick="/*play()*/">
             <article class="photos_destination carrousel1">
                     <img src="images/wallpaper1.jpg" alt="mediterranee" title="mediterranee">
             </article>
@@ -98,7 +102,7 @@
     </div>
     <div class="combat_1">
     <img src="images/CELIA SARRAUTE.jpeg" id="myImg" alt="alexandra" class="image" height="300px">
-    <div id="myModal" class="modal">
+      <div id="myModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="img01">
         <div id="caption"></div>
@@ -126,8 +130,9 @@
         
         </div>
     </div>
-    
-    <img src="images/CELIA SARRAUTE.jpeg" alt="alexandra" class="image" height="300px">
+        <canvas id="canvas" width="150" height="300"></canvas>
+        <div id="curseur"><canvas id='cursor-canvas' width="200" height="200"></canvas></div>
+    <!--<img src="images/CELIA SARRAUTE.jpeg" alt="alexandra" class="image" height="300px">-->
     <ul class="combattant_2">
         <li><strong>AMEL DEHBY</strong> </li>
         <li>Badri ROUABHIA</li>
@@ -186,7 +191,7 @@
         <li>Classe B - Semi professionnel</li>
     </div>
     <div class="combat_1">
-    <img src="images/CELIA SARRAUTE.jpeg" id="myImg" alt="alexandra" class="image" height="300px">
+    <img src="images/CELIA SARRAUTE.jpeg"  alt="alexandra" class="image" height="300px">
     <ul class="combattant_1">
         <li><strong>CELIA SARRAUTE</strong> </li>
         <li>Club KERNER TEAM</li>
@@ -229,7 +234,7 @@
         <li>Classe B - Semi professionnel</li>
     </div>
     <div class="combat_1">
-    <img src="images/CELIA SARRAUTE.jpeg" id="myImg" alt="alexandra" class="image" height="300px">
+    <img src="images/CELIA SARRAUTE.jpeg" alt="alexandra" class="image" height="300px">
     <ul class="combattant_1">
         <li><strong>CELIA SARRAUTE</strong> </li>
         <li>Club KERNER TEAM</li>
@@ -482,7 +487,8 @@
 </div>
 
 
-<script src="script.js"></script>
+
 <script src="JS/carrousel_v2.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

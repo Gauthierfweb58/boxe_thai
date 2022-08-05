@@ -60,9 +60,7 @@ btn.forEach(element => {
 
 });
 btn.forEach(element => {
-    console.log(element);
       element.addEventListener('click', (e) => { //()=> veut dire fonction nouvelle écriture en javascript
-        console.log(e.target.parentNode.parentNode);
           let vumain = e.target.parentNode.parentNode.querySelector(".visible");
           if(vumain.classList.contains("vu")) {
               vumain.classList.remove("vu");
@@ -185,3 +183,51 @@ function scrollFunction() {
     document.getElementById("scroll_to_top").style.transform = "500ms";
   }
 }
+$(document).ready( function () {
+                
+  var canvas = document.getElementById('canvas');
+  var ctx = canvas.getContext('2d');
+  
+  var cursorCanvas= document.getElementById('cursor-canvas');
+  var ctx_cc = cursorCanvas.getContext('2d');
+  
+  //Une fois la page bien ready
+  //l'image de fond est chargée dans un objet Image
+  var img1 = new Image();
+  img1.src = './images/CELIA SARRAUTE.jpeg';
+
+  img1.onload = function(){
+      //L'image dessinée dans le canvas du fond
+      ctx.drawImage(img1,0, 0, 150, 300);
+  };
+  
+  //Le filtre qui floute l'image du fond est appliquée sur le 
+  //canvas du fond
+  ctx.filter = 'blur(5px)';
+
+  //Lorsque le curseur se promène sur l'image
+  //l'image suit le curseur
+  $("#canvas").on("mousemove", function (event) {
+      var x=event.pageX;
+      var y=event.pageY;
+      $("#curseur").css("left",event.pageX);
+      $("#curseur").css("top",event.pageY);
+      
+//L'astuce pour afficher l'image en clair
+//est dans cette seule ligne:
+//img1 c'est l'image sans aucun effet de flou (le flou est appliqué au canvas)
+//Les 4 premiers paramètres de cette fonction précise la portion de l'image
+//que l'on veut afficher en l'occurrence on veut afficher ce qui ce trouve au
+//niveau du curseur : x et y sont les coordonnées du curseur, 50x50 c'est la taille
+// de la zone que l'on veut afficher!
+//Les 4 derniers paramètres sont l'emplacement et la taille de l'image dans
+//le canvas lui même ...
+      if (img1 != undefined) {
+      ctx_cc.drawImage(img1, x, y, 50, 50, 0, 0, 150, 150);
+  }
+  });
+
+});
+
+
+
