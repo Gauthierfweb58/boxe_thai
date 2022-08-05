@@ -41,16 +41,25 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() { 
   modal.style.display = "none";
+
 }
 const btn = document.querySelectorAll('.btn-checkbox')
 /*const vu = document.getElementsByClassName('vu')*/
 
 /*btn.array.forEach(element => {
+
+}*/
+const btn = document.querySelectorAll('.btn-checkbox')
+/*const vu = document.getElementsByClassName('vu')*/
+
+btn.array.forEach(element => {
+
     element.addEventListener('click', (e) => { //()=> veut dire fonction nouvelle écriture en javascript
         let vumain = this.PannerNode.querySelector(".visible");
         vumain.classList.remove("vu");
         vumain.classList.add("show"); //show class déclarée en css // toggle appelle ou enlève au clic donc ici l'image apparait ou disparait
     })
+
 });*/
 btn.forEach(element => {
     console.log(element);
@@ -126,6 +135,9 @@ mouseEvent.addEventListener("mousemove", (e) => { // e pour event
         document.body.style.filter = "none"; // pas de floutage en dessous
     }
 })
+
+});
+
 
 
 /**********************************************************************************************************/
