@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script> 
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <title>Championnat</title>
 </head>
 <body>
@@ -54,6 +56,7 @@
         </ul>
     </nav>
 </header>
+
 <section id="offres_actuelles" class="section_1">
         <div id="destination" onclick="play()">
             <article class="photos_destination carrousel1">
@@ -75,6 +78,12 @@
                     <img src="images/wallpaper5.jpg" alt="Ile maurice" title="Ile maurice">
             </article>
         </div>
+
+
+<section id="section_1" class="section_1">
+    <div id="gauche" onclick="gauche()"></div>
+    <div id="droite" onclick="droite()"></div>
+
 </section>
 <script src="JS/carrousel_v2.js"></script>
 
@@ -89,11 +98,102 @@
     </div>
     <div class="combat_1">
     <img src="images/CELIA SARRAUTE.jpeg" id="myImg" alt="alexandra" class="image" height="300px">
-    <!--<div id="myModal" class="modal">
+    <div id="myModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="img01">
         <div id="caption"></div>
-      </div>-->
+      </div>
+    <ul class="combattant_1">
+        <li><strong>CELIA SARRAUTE</strong> </li>
+        <li>Club KERNER TEAM</li>
+        <li>Nationalité : Française</li>
+        <li>15 combats</li>
+        <li>12 V 0 N 3 D 4 KO</li>
+        <li><strong>22 ans 180 cm</strong></li>
+        <li><strong>55 - 57 kgs</strong></li>  
+</ul>
+    
+    <div class="clickEvent">
+        <div class="iphone-check" class="btn">
+            <input type="checkbox" class="btn-checkbox">
+            <span class="btn-check"></span>
+            <span class="ball-check"></span>
+        </div>
+        <div class="vu visible">
+            <div>
+                <img src="images/annuler.svg" alt="perdu" class="perdu">    
+            </div>
+            
+            <div>
+                <img src="images/valider.svg" alt="gagne" class="gagne">
+            </div>
+        </div>
+    </div>
+    
+    <img src="images/CELIA SARRAUTE.jpeg" alt="alexandra" class="image" height="300px">
+    <ul class="combattant_2">
+        <li><strong>AMEL DEHBY</strong> </li>
+        <li>Badri ROUABHIA</li>
+        <li>Nationalité : Française</li>
+        <li>39 combats</li>
+        <li>34 V  1 N  4 D  11 KO</li>
+        <li><strong>31 ans 170 cm</strong></li>
+        <li><strong>58 - 60 kgs</strong></li>
+        <li>Mixte</li> 
+    </ul>
+    
+    </div>
+</div>
+<div class="combat_3">
+   
+    <div class="classe">
+        <li>Classe B - Semi professionnel</li>
+    </div>
+    <div class="combat_1">
+    <img src="images/CELIA SARRAUTE.jpeg" alt="alexandra" class="image" height="300px">
+    <ul class="combattant_1">
+        <li><strong>CELIA SARRAUTE</strong> </li>
+        <li>Club KERNER TEAM</li>
+        <li>Nationalité : Française</li>
+        <li>15 combats</li>
+        <li>12 V 0 N 3 D 4 KO</li>
+        <li><strong>22 ans 180 cm</strong></li>
+        <li><strong>55 - 57 kgs</strong></li>  
+    </ul>
+    <div class="clickEvent">
+        <div class="iphone-check" id="btn">
+            <input type="checkbox" class="btn-checkbox">
+            <span class="btn-check"></span>
+            <span class="ball-check"></span>
+        </div>
+    <div class="vu visible">
+        <div>
+            <img src="images/valider.svg" alt="gagne" class="gagne">
+        </div>
+        <div>
+            <img src="images/annuler.svg" alt="perdu" class="perdu">
+        </div>
+    </div>
+    </div>
+    <img src="images/CELIA SARRAUTE.jpeg" alt="alexandra" class="image" height="300px">
+    <ul class="combattant_2">
+        <li><strong>CELIA SARRAUTE</strong> </li>
+        <li>Club KERNER TEAM</li>
+        <li>Nationalité : Française</li>
+        <li>15 combats</li>
+        <li>12 V  0 N  3 D  4 KO</li>
+        <li><strong>22 ans 180 cm</strong></li>
+        <li><strong>55 - 57 kgs</strong></li>  
+    </ul>
+    </div>
+</div>
+<div class="combat_3">
+   
+    <div class="classe">
+        <li>Classe B - Semi professionnel</li>
+    </div>
+    <div class="combat_1">
+    <img src="images/CELIA SARRAUTE.jpeg" id="myImg" alt="alexandra" class="image" height="300px">
     <ul class="combattant_1">
         <li><strong>CELIA SARRAUTE</strong> </li>
         <li>Club KERNER TEAM</li>
@@ -104,8 +204,56 @@
         <li><strong>55 - 57 kgs</strong></li>  
     </ul>
     
-    <div class="clickEvent"> <!--id="blurImg"-->
-        <div class="iphone-check" class="btn">
+    <div class="clickEvent">
+        <div class="iphone-check" id="btn">
+            <input type="checkbox" class="btn-checkbox">
+            <span class="btn-check"></span>
+            <span class="ball-check"></span>
+        </div>
+        <div class="vu visible">
+            <div>
+                <img src="images/annuler.svg" alt="perdu" class="perdu">    
+            </div>
+            
+            <div>
+                <img src="images/valider.svg" alt="gagne" class="gagne">
+            </div>
+        </div>
+    </div>
+    
+    <img src="images/CELIA SARRAUTE.jpeg" alt="alexandra" class="image" height="300px">
+    <ul class="combattant_2">
+        <li><strong>AMEL DEHBY</strong> </li>
+        <li>Badri ROUABHIA</li>
+        <li>Nationalité : Française</li>
+        <li>39 combats</li>
+        <li>34 V  1 N  4 D  11 KO</li>
+        <li><strong>31 ans 170 cm</strong></li>
+        <li><strong>58 - 60 kgs</strong></li>
+        <li>Mixte</li> 
+    </ul>
+    
+    </div>
+</div>
+<div class="combat_3">
+   
+    <div class="classe">
+        <li>Classe B - Semi professionnel</li>
+    </div>
+    <div class="combat_1">
+    <img src="images/CELIA SARRAUTE.jpeg" id="myImg" alt="alexandra" class="image" height="300px">
+    <ul class="combattant_1">
+        <li><strong>CELIA SARRAUTE</strong> </li>
+        <li>Club KERNER TEAM</li>
+        <li>Nationalité : Française</li>
+        <li>15 combats</li>
+        <li>12 V 0 N 3 D 4 KO</li>
+        <li><strong>22 ans 180 cm</strong></li>
+        <li><strong>55 - 57 kgs</strong></li>  
+    </ul>
+    
+    <div class="clickEvent">
+        <div class="iphone-check" id="btn">
             <input type="checkbox" class="btn-checkbox">
             <span class="btn-check"></span>
             <span class="ball-check"></span>
@@ -142,12 +290,7 @@
         <li>Classe B - Semi professionnel</li>
     </div>
     <div class="combat_1">
-    <img src="images/CELIA SARRAUTE.jpeg" id="myImg" alt="alexandra" class="image" height="300px">
-    <!--<div id="myModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="img01">
-        <div id="caption"></div>
-      </div>-->
+    <img src="images/CELIA SARRAUTE.jpeg" alt="alexandra" class="image" height="300px">
     <ul class="combattant_1">
         <li><strong>CELIA SARRAUTE</strong> </li>
         <li>Club KERNER TEAM</li>
@@ -157,168 +300,20 @@
         <li><strong>22 ans 180 cm</strong></li>
         <li><strong>55 - 57 kgs</strong></li>  
     </ul>
-    
-    <div class="clickEvent"> <!--id="blurImg"-->
+    <div class="clickEvent">
         <div class="iphone-check" id="btn">
             <input type="checkbox" class="btn-checkbox">
             <span class="btn-check"></span>
             <span class="ball-check"></span>
         </div>
-        <div id="vu">
-            <div>
-                <img src="images/annuler.svg" alt="perdu" class="perdu">    
-            </div>
-            
-            <div>
-                <img src="images/valider.svg" alt="gagne" class="gagne">
-            </div>
+    
+        <div class="vu visible">
+        <div>
+            <img src="images/valider.svg" alt="gagne" class="gagne">
         </div>
-    </div>
-    
-    <img src="images/CELIA SARRAUTE.jpeg" alt="alexandra" class="image" height="300px">
-    <ul class="combattant_2">
-        <li><strong>AMEL DEHBY</strong> </li>
-        <li>Badri ROUABHIA</li>
-        <li>Nationalité : Française</li>
-        <li>39 combats</li>
-        <li>34 V  1 N  4 D  11 KO</li>
-        <li><strong>31 ans 170 cm</strong></li>
-        <li><strong>58 - 60 kgs</strong></li>
-        <li>Mixte</li> 
-    </ul>
-    
-    </div>
-</div>
-<div class="combat_3">
-   
-    <div class="classe">
-        <li>Classe B - Semi professionnel</li>
-    </div>
-    <div class="combat_1">
-    <img src="images/CELIA SARRAUTE.jpeg" id="myImg" alt="alexandra" class="image" height="300px">
-    <!--<div id="myModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="img01">
-        <div id="caption"></div>
-      </div>-->
-    <ul class="combattant_1">
-        <li><strong>CELIA SARRAUTE</strong> </li>
-        <li>Club KERNER TEAM</li>
-        <li>Nationalité : Française</li>
-        <li>15 combats</li>
-        <li>12 V 0 N 3 D 4 KO</li>
-        <li><strong>22 ans 180 cm</strong></li>
-        <li><strong>55 - 57 kgs</strong></li>  
-    </ul>
-    
-    <div class="clickEvent"> <!--id="blurImg"-->
-        <div class="iphone-check" id="btn">
-            <input type="checkbox" class="btn-checkbox">
-            <span class="btn-check"></span>
-            <span class="ball-check"></span>
-        </div>
-        <div id="vu">
-            <div>
-                <img src="images/annuler.svg" alt="perdu" class="perdu">    
-            </div>
-            
-            <div>
-                <img src="images/valider.svg" alt="gagne" class="gagne">
-            </div>
-        </div>
-    </div>
-    
-    <img src="images/CELIA SARRAUTE.jpeg" alt="alexandra" class="image" height="300px">
-    <ul class="combattant_2">
-        <li><strong>AMEL DEHBY</strong> </li>
-        <li>Badri ROUABHIA</li>
-        <li>Nationalité : Française</li>
-        <li>39 combats</li>
-        <li>34 V  1 N  4 D  11 KO</li>
-        <li><strong>31 ans 170 cm</strong></li>
-        <li><strong>58 - 60 kgs</strong></li>
-        <li>Mixte</li> 
-    </ul>
-    
-    </div>
-</div>
-<div class="combat_3">
-   
-    <div class="classe">
-        <li>Classe B - Semi professionnel</li>
-    </div>
-    <div class="combat_1">
-    <img src="images/CELIA SARRAUTE.jpeg" id="myImg" alt="alexandra" class="image" height="300px">
-    <!--<div id="myModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="img01">
-        <div id="caption"></div>
-      </div>-->
-    <ul class="combattant_1">
-        <li><strong>CELIA SARRAUTE</strong> </li>
-        <li>Club KERNER TEAM</li>
-        <li>Nationalité : Française</li>
-        <li>15 combats</li>
-        <li>12 V 0 N 3 D 4 KO</li>
-        <li><strong>22 ans 180 cm</strong></li>
-        <li><strong>55 - 57 kgs</strong></li>  
-    </ul>
-    
-    <div class="clickEvent"> <!--id="blurImg"-->
-        <div class="iphone-check" id="btn">
-            <input type="checkbox" class="btn-checkbox">
-            <span class="btn-check"></span>
-            <span class="ball-check"></span>
-        </div>
-        <div id="vu">
-            <div>
-                <img src="images/annuler.svg" alt="perdu" class="perdu">    
-            </div>
-            
-            <div>
-                <img src="images/valider.svg" alt="gagne" class="gagne">
-            </div>
-        </div>
-    </div>
-    
-    <img src="images/CELIA SARRAUTE.jpeg" alt="alexandra" class="image" height="300px">
-    <ul class="combattant_2">
-        <li><strong>AMEL DEHBY</strong> </li>
-        <li>Badri ROUABHIA</li>
-        <li>Nationalité : Française</li>
-        <li>39 combats</li>
-        <li>34 V  1 N  4 D  11 KO</li>
-        <li><strong>31 ans 170 cm</strong></li>
-        <li><strong>58 - 60 kgs</strong></li>
-        <li>Mixte</li> 
-    </ul>
-    
-    </div>
-</div>
-
-<div class="combat_3">
-   
-    <div class="classe">
-        <li>Classe B - Semi professionnel</li>
-    </div>
-    <div class="combat_1">
-    <img src="images/CELIA SARRAUTE.jpeg" alt="alexandra" class="image" height="300px">
-    <ul class="combattant_1">
-        <li><strong>CELIA SARRAUTE</strong> </li>
-        <li>Club KERNER TEAM</li>
-        <li>Nationalité : Française</li>
-        <li>43 combats</li>
-        <li>34 V 1 N 8 D 4 1 KO</li>
-        <li><strong>35 ans 159 cm</strong></li>
-        <li><strong>52 - 54 kgs</strong></li>
-        <li>Droitier</li>  
-    </ul>
-    <div>
         <div>
             <img src="images/annuler.svg" alt="perdu" class="perdu">
         </div>
-        <div>
-            <img src="images/valider.svg" alt="gagne" class="gagne">
         </div>
     </div>
     <img src="images/CELIA SARRAUTE.jpeg" alt="alexandra" class="image" height="300px">
@@ -339,7 +334,7 @@
         <li>Classe B - Semi professionnel</li>
     </div>
     <div class="combat_1">
-    <img src="images/CELIA SARRAUTE.jpeg" alt="alexandra" class="image" height="300px">
+    <img src="images/CELIA SARRAUTE.jpeg" id="myImg" alt="alexandra" class="image" height="300px">
     <ul class="combattant_1">
         <li><strong>CELIA SARRAUTE</strong> </li>
         <li>Club KERNER TEAM</li>
@@ -349,36 +344,124 @@
         <li><strong>22 ans 180 cm</strong></li>
         <li><strong>55 - 57 kgs</strong></li>  
     </ul>
-    <div>
-        <div>
-            <img src="images/valider.svg" alt="gagne" class="gagne">
+    
+    <div class="clickEvent">
+        <div class="iphone-check" id="btn">
+            <input type="checkbox" class="btn-checkbox">
+            <span class="btn-check"></span>
+            <span class="ball-check"></span>
         </div>
-        <div>
-            <img src="images/annuler.svg" alt="perdu" class="perdu">
+        <div class="vu visible">
+            <div>
+                <img src="images/annuler.svg" alt="perdu" class="perdu">    
+            </div>
+            
+            <div>
+                <img src="images/valider.svg" alt="gagne" class="gagne">
+            </div>
         </div>
     </div>
+    
     <img src="images/CELIA SARRAUTE.jpeg" alt="alexandra" class="image" height="300px">
     <ul class="combattant_2">
-        <li><strong>CELIA SARRAUTE</strong> </li>
-        <li>Club KERNER TEAM</li>
+        <li><strong>AMEL DEHBY</strong> </li>
+        <li>Badri ROUABHIA</li>
         <li>Nationalité : Française</li>
-        <li>15 combats</li>
-        <li>12 V  0 N  3 D  4 KO</li>
-        <li><strong>22 ans 180 cm</strong></li>
-        <li><strong>55 - 57 kgs</strong></li>  
+        <li>39 combats</li>
+        <li>34 V  1 N  4 D  11 KO</li>
+        <li><strong>31 ans 170 cm</strong></li>
+        <li><strong>58 - 60 kgs</strong></li>
+        <li>Mixte</li> 
     </ul>
+    
     </div>
 </div>
+<section id="section_3">
 
-
-    
+    <div id="onglets">
+        <ul>
+         <li><button class="bouton_onglet"><a href="#onglet-1">Histoire de la boxe thai</a></button></li>
+         <li><button class="bouton_onglet"><a href="#onglet-2">Les premiers équipements des boxeurs</a></button></li>
+         <li><button class="bouton_onglet"><a href="#onglet-3">Internationalisation de la boxe thaïlandaise</a></button></li>
+        </ul>
+        <div id="onglet-1">
+          <p>Histoire du Muay thaï
+            La genèse, l'histoire ancienne et l'image du muay thaï sont présentées d'une manière standardisée dans une abondante littérature en Thaïlande.
             
+            Les données historiques les plus anciennes, qui attesteraient de pratiques de boxe avant le XIXe siècle, sont inspirées principalement par les chroniques royales, plusieurs fois réécrites (notamment sous Rama Ier), après les destructions du XVIIIe siècle (chute d'Ayutthaya en 1767).
+            
+            Il est donc difficile de confirmer l'historicité des légendes et de la genèse du muay thai.
+            
+            De même, il ne faut pas ignorer la forte teneur idéologique, notamment nationaliste, qui préside en Thaïlande à la présentation des origines de la boxe thaïlandaise (et du muay-boran), son histoire ancienne, et son image contemporaine.
+            
+            Le combat des fils du roi Sen Muang Ma
+            Selon la tradition, en 1411, à la mort du roi Sen Muang Ma, ses deux fils, Ki et Fang, voulurent s'emparer du pouvoir.
+            
+            Comme leurs armées respectives n'arrivaient pas à se départager sur un champ de bataille, ils décidèrent de régler leur conflit par un duel.
+            
+            Chaque camp choisit son meilleur boxeur. L'homme de Fang fut battu et Ki monta sur le trône.
+            
+            La technique de combat de son guerrier (boxeur) fit école.
+            
+            La popularité du Muay Thaï
+            Au XVIe siècle, la boxe thaïlandaise faisait partie de l'entraînement militaire. Le roi Naresuan le grand (r. 1590-1605) aurait encouragé sa pratique à ce titre.
+            
+            Il atteignit sa plus grande popularité au début du XVIIIe siècle, sous le règne de Pra Chao Sua, "le Roi Tigre".
+            
+            C'était le passe-temps favori de la population ; chaque village organisait des combats régulièrement.
+            
+            Le roi, qui était un boxeur de première force s'amusait à défier les champions locaux !</p>
+        </div>
+        <div id="onglet-2">
+          <p>À l'époque, les combattants protégeaient leurs poings en se bandant les mains avec du crin de cheval.
+      
+            Plus tard, le crin fut remplacé par des bandes de coton maintenues avec de la glu.
+            
+            On se servait de coquillages ou d'écorces d'arbres, comme coquille !
+            
+            Parfois, avec l'accord des deux boxeurs, des morceaux de verre pouvaient être amalgamés dans la glu des bandages.
+            
+            À cette époque, les combats se déroulaient sans catégories de poids ni de limite de temps (combat dit « au finish).</p>
+        </div>
+        <div id="onglet-3">
+          <p>Le développement du tourisme en Thaïlande a fait découvrir le muay thaï aux autres nations.
+      
+            Il s'est d'abord répandu aux Pays-Bas puis est venu très vite concurrencer en France le full-contact (boxe américaine) et le kick-boxing américain (low-kick), cela dans sa version « garantie d'origine » et dans sa version japonaise, le kick-boxing japonais (ou K-1).
+            
+            En 1966, l'adepte du karaté kyokushinkai Kenji Kurosaki défia un boxeur thaïlandais et fut battu par K.O. au premier round.
+            
+            Après ce combat, il séjourna en Thaïlande plusieurs mois, pour étudier le muay thaï, qu'il introduisit ensuite au Japon sous le nom de kick-boxing.</p>
        
-<script src="script.js"></script>
+            <img src="images/prestige-fight-galas-prestigieux-muay-thai.jpg" width="200px" height="200px" alt="">
+          </div>
+      </div>
+
+ <h1>PRET A COMBATTRE, GLISSEZ DEPOSEZ VOS 2 BOXEURS</h1>
+<div class="glisser">
+    <div class="classe">
+        <img src="images/CELIA SARRAUTE.jpeg" alt="" id="depart" draggable="true" />
+        <img src="images/Chafia-Djouahra-Denizot-removebg-preview.png" alt="" id="depart1" draggable="true" />
+        <img src="images/nawel-vanweyenberg-removebg-preview (1).png" alt="" id="depart2" draggable="true" />
+        <img src="images/alexandra.jpg" alt="" id="depart3" draggable="true" />
+        <img src="images/arbitre.jfif" alt="" id="depart4" draggable="true" />
+        <br/>
+    </div>
+    <div id="arrivee">DAL</div>
+</div>
+<div class="mouseEvent">
+    <div>Ouverture vers la gauche : <span class="horizontal">Bonjour</span> </div>
+    <div>Fermeture vers la droite : <span class="vertical">A bientôt</span> </div>
+</div>
+
+<form>
+    <input Type="button" value="Rafraîchir la page" id="rafraichissement_jeu" onClick="history.go(0)">
+</form>
+</section>      
+
        
 
 
-<div class="clickEvent">
+<!--<div class="clickEvent">
     <button id="btn">Appuyez ici pour voir la liste des boxeurs/euses</button>
     <br>
     <select id="personne" style='font-family:verdana; font-size:10; width:300px;' size='6'>
@@ -394,12 +477,7 @@
         </ol>
     </div>
     </select>
-</div>
-
-<section>
-
-</section>
-
+</div>-->
 
 <footer>
     <div class="ligne">
@@ -428,6 +506,6 @@
 </footer>
 
 
-
+<script src="script.js"></script>
 </body>
 </html>
