@@ -43,8 +43,6 @@ span.onclick = function() {
   modal.style.display = "none";
 
 }
-const btn = document.querySelectorAll('.btn-checkbox')
-/*const vu = document.getElementsByClassName('vu')*/
 
 /*btn.array.forEach(element => {
 
@@ -60,7 +58,7 @@ btn.array.forEach(element => {
         vumain.classList.add("show"); //show class déclarée en css // toggle appelle ou enlève au clic donc ici l'image apparait ou disparait
     })
 
-});*/
+});
 btn.forEach(element => {
     console.log(element);
       element.addEventListener('click', (e) => { //()=> veut dire fonction nouvelle écriture en javascript
@@ -123,20 +121,20 @@ const horizontal = document.querySelector(".horizontal");
 const vertical = document.querySelector(".vertical");
 
 mouseEvent.addEventListener("mousemove", (e) => { // e pour event
-   // console.log(event);
+    // console.log(event);
     horizontal.innerHTML = e.x;
     vertical.innerHTML = e.y;
     mouseEvent.style.left = e.x / window.innerWidth * 100 + "%";//permet de bouger de gauche à droite
-   // mouseEvent.style.top = e.y / window.innerHeight * 100 + "%";// permet de bouger de haut en bas
+    // mouseEvent.style.top = e.y / window.innerHeight * 100 + "%";// permet de bouger de haut en bas
 
     if (e.x > 1200) {
         document.body.style.filter = "blur(5px)"; // pour flouter dès que cela dépasse 500px
     } else {
         document.body.style.filter = "none"; // pas de floutage en dessous
     }
-})
-
 });
+
+
 
 
 
