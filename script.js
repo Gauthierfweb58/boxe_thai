@@ -21,12 +21,12 @@ btn.addEventListener('click', addBlur)
 
 function addBlur() {
   img.style.filter = 'blur(20px)';
-}
+}*/
 // Get the modal
-/*var modal = document.getElementById('myModal');
+var modal = document.getElementById('myModal');
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
-/*var img = document.getElementById('myImg');
+var img = document.getElementById('myImg');
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
 img.onclick = function(){
@@ -41,21 +41,94 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() { 
   modal.style.display = "none";
-}*/
+}
 const btn = document.querySelectorAll('.btn-checkbox')
 /*const vu = document.getElementsByClassName('vu')*/
 
-btn.array.forEach(element => {
+/*btn.array.forEach(element => {
     element.addEventListener('click', (e) => { //()=> veut dire fonction nouvelle écriture en javascript
         let vumain = this.PannerNode.querySelector(".visible");
         vumain.classList.remove("vu");
         vumain.classList.add("show"); //show class déclarée en css // toggle appelle ou enlève au clic donc ici l'image apparait ou disparait
     })
+});*/
+btn.forEach(element => {
+    console.log(element);
+      element.addEventListener('click', (e) => { //()=> veut dire fonction nouvelle écriture en javascript
+        console.log(e.target.parentNode.parentNode);
+          let vumain = e.target.parentNode.parentNode.querySelector(".visible");
+          if(vumain.classList.contains("vu")) {
+              vumain.classList.remove("vu");
+              vumain.classList.add("show"); //show class déclarée en css // toggle appelle ou enlève au clic donc ici l'image apparait ou disparait
+          } else {
+              vumain.classList.remove("show");
+              vumain.classList.add("vu"); //show class déclarée en css // toggle appelle ou enlève au clic donc ici l'image apparait ou disparait
+          }
+      })
+  });
+/*GLISSER DEPOSER*/
+var deplacable = document.getElementById("depart");
+var deplacable1 = document.getElementById("depart1");
+var deplacable2 = document.getElementById("depart2");
+var deplacable3 = document.getElementById("depart3");
+var deplacable4 = document.getElementById("depart4");
+var depot = document.getElementById("arrivee");
+
+
+deplacable.addEventListener('dragstart', function(ev){
+    ev.dataTransfer.setData("text", ev.target.id);
+});
+deplacable1.addEventListener('dragstart', function(ev){
+    ev.dataTransfer.setData("text", ev.target.id);
+});
+deplacable2.addEventListener('dragstart', function(ev){
+    ev.dataTransfer.setData("text", ev.target.id);
+});
+deplacable3.addEventListener('dragstart', function (ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+});
+deplacable4.addEventListener('dragstart', function (ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
 });
 
-  
+
+depot.addEventListener('drop', function(ev){
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+});
+depot.addEventListener('dragover', function(ev){
+    ev.preventDefault();
+});
+
+/*****************onglets ********************************************* */
+$(document).ready(function() {
+	$( "#onglets" ).tabs();
+});
 
 
+
+
+const mouseEvent = document.querySelector(".mouseEvent");
+const horizontal = document.querySelector(".horizontal");
+const vertical = document.querySelector(".vertical");
+
+mouseEvent.addEventListener("mousemove", (e) => { // e pour event
+   // console.log(event);
+    horizontal.innerHTML = e.x;
+    vertical.innerHTML = e.y;
+    mouseEvent.style.left = e.x / window.innerWidth * 100 + "%";//permet de bouger de gauche à droite
+   // mouseEvent.style.top = e.y / window.innerHeight * 100 + "%";// permet de bouger de haut en bas
+
+    if (e.x > 1200) {
+        document.body.style.filter = "blur(5px)"; // pour flouter dès que cela dépasse 500px
+    } else {
+        document.body.style.filter = "none"; // pas de floutage en dessous
+    }
+})
+
+
+/**********************************************************************************************************/
 
 function menu1(){
     document.getElementById('menu').style.opacity = "1";
