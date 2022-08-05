@@ -171,3 +171,17 @@ function play(){
   }
 
 }
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    document.getElementById("scroll_to_top").style.opacity = "1";
+    document.getElementById("scroll_to_top").style.zIndex = "50";
+    document.getElementById("scroll_to_top").style.transform = "500ms";
+  } else {
+    document.getElementById("scroll_to_top").style.opacity = "0";
+    document.getElementById("scroll_to_top").style.zIndex = "-50";
+    document.getElementById("scroll_to_top").style.transform = "500ms";
+  }
+}
