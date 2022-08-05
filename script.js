@@ -50,7 +50,7 @@ span.onclick = function() {
 const btn = document.querySelectorAll('.btn-checkbox')
 /*const vu = document.getElementsByClassName('vu')*/
 
-btn.array.forEach(element => {
+btn.forEach(element => {
 
     element.addEventListener('click', (e) => { //()=> veut dire fonction nouvelle écriture en javascript
         let vumain = this.PannerNode.querySelector(".visible");
