@@ -434,7 +434,7 @@ opacity: 0;
     flex-direction: row;
     justify-content: center;
     text-align:justify;
-    border: 2px dashed orange;
+    border: 2px dashed rgb(192, 117, 31);
     margin:50px;
     padding:30px;
     width: fit-content;
@@ -442,8 +442,11 @@ opacity: 0;
 
 .bouton_onglet{
     border-radius: 70px 10px 100px 40px;
-    background-color: orange;
+    background-color: rgb(192, 117, 31);
     padding: 20px;
+}
+.bouton_onglet a:hover{
+  color: whitesmoke;
 }
 .bouton_onglet a {
     text-decoration: none;
@@ -457,6 +460,9 @@ opacity: 0;
   #onglets p{
     color: white;
     padding-left: 10px;
+  }
+  #section_3 h1{
+    font-size: 20px;
   }
 
 
@@ -646,13 +652,13 @@ footer p, footer a {
   /*display: none;*/
 }
 #popup{
-  top: 0;
-  left: 5%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
   margin: 50px auto;
   position: fixed;
   width:90%;
-  height: 90%;
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.747);
   border-radius: 10px;
   box-shadow: 10px 10px 20px 10px rgba(255, 255, 255, 0.24);
   z-index: -2;
@@ -663,4 +669,27 @@ footer p, footer a {
 }
 ::-webkit-scrollbar {
   display: none;
+  }
+  table{
+    color: whitesmoke;
+    border-collapse:collapse;
+    width: 95%;
+    margin: auto;
+  }
+  th, td{
+    border:1px solid whitesmoke;
+    padding: 10px;
+    text-align: center;
+  }
+  .rouge{
+    background-color: rgb(170, 29, 29);
+  }
+  .bleu{
+    background-color: rgb(30, 30, 173);
+  }
+  .gagnant p{
+    color: whitesmoke;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
   }
