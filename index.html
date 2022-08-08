@@ -437,8 +437,8 @@
     <div id="arrivee">DAL</div>
 </div>
 
-<h1>PREPARATION PLATEAU DES COMBATTANTS POUR GALA</h1>
-		<select id='Liste1' size='10' ondblclick='BasculerVersListe(this, document.getElementById("Liste2"));'>
+<h1 id="plateau">PREPARATION PLATEAU DES COMBATTANTS POUR GALA</h1>
+		<select id='Liste1' size='9' ondblclick='BasculerVersListe(this, document.getElementById("Liste2"));'>
 			<option>Jason QUITUSISA</option>
 			<option>Sami CRAUSER</option>
 			<option>Aristote QUITUSISA</option>
@@ -449,32 +449,32 @@
             <option>Idrissa MAKALOU</option>
 		</select>
 		&nbsp;
-		<select id='Liste2' size='10' ondblclick='BasculerVersListe(this, document.getElementById("Liste1"));'>
+		<select id='Liste2' size='9' ondblclick='BasculerVersListe(this, document.getElementById("Liste1"));'>
 		</select>
 
 <div class="mouseEvent">
-    <div>Ouverture vers la gauche : <span class="horizontal">Bonjour</span> </div>
-    <div>Fermeture vers la droite : <span class="vertical">A bientôt</span> </div>
+    <div><span class="horizontal"></span> </div>
+    <div<span class="vertical"></span> </div>
 </div>
 
 </section>      
 
 <section id="filters">
-    <div id="all">Toutes catégories</div>
-    <div id="75_kgs">75 KGS</div>
-    <div id="80_kgs">80 KGS</div>
-    <div id="84_kgs">84 KGS</div>
+    <div id="all" onclick="chgt_background1()">Toutes catégories</div>
+    <div id="75_kgs" onclick="chgt_background2()">75 KGS</div>
+    <div id="80_kgs" onclick="chgt_background3()">80 KGS</div>
+    <div id="84_kgs" onclick="chgt_background4()">84 KGS</div>
 </section>
 <div id="gallery">
-    <img src="images/Jason QUITUSISA.jpg" alt="Oiseau" data-84_kgs class="active" width="100px">
-    <img src="images/Sami CRAUSER.jpg" alt="Musicien" data-75_kgs class="active">
-    <img src="images/Aristote QUITUSISA.jpg" alt="Papillon" data-84_kgs class="active">
-    <img src="images/Demba SYLLA.jpg" alt="Baies" class="active">
-    <img src="images/Jason QUITUSISA.jpg" alt="Oiseau" data-75_kgs class="active">
-    <img src="images/Demba SYLLA.jpg" alt="Fleurs" data-75_kgs class="active">
-    <img src="images/Sami CRAUSER.jpg" alt="Enfants" data-80_kgs data-flower class="active">
-    <img src="images/Aristote QUITUSISA.jpg" alt="Mother" data-80_kgs class="active">
-    <img src="images/Sami CRAUSER.jpg" alt="Dame" data-80_kgs class="active">
+    <img src="images/Jason QUITUSISA.jpg" alt="boxeur" data-84_kgs class="active">
+    <img src="images/Sami CRAUSER.jpg" alt="boxeur" data-75_kgs class="active">
+    <img src="images/Aristote QUITUSISA.jpg" alt="boxeur" data-84_kgs class="active">
+    <img src="images/Demba SYLLA.jpg" alt="boxeur" class="active">
+    <img src="images/Jason QUITUSISA.jpg" alt="boxeur" data-75_kgs class="active">
+    <img src="images/Demba SYLLA.jpg" alt="boxeur" data-75_kgs class="active">
+    <img src="images/Sami CRAUSER.jpg" alt="boxeur" data-80_kgs data-flower class="active">
+    <img src="images/Aristote QUITUSISA.jpg" alt="boxeur" data-80_kgs class="active">
+    <img src="images/Sami CRAUSER.jpg" alt="boxeur" data-80_kgs class="active">
 </div>
 
 
