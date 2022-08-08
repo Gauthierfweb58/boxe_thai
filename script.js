@@ -1,110 +1,68 @@
-var combattant1 = { prenom: "JASON", nom: "QUITUSISA", age: '22 ans', taille: '180 cms', club: 'KERNER TEAM', Nationnalité: 'Français', Palmarès: '15 combats', Nbre: '12 V 0 N 3 D 4 KO', Poids: '78 kgs - 80 kgs' };
-var combattant2 = { prenom: "KARIM", nom: "OUNISSI", age: '24 ans', taille: '172 cms', club: 'Badri ROUABHIA', Nationnalité: 'Français', Palmarès: '39 combats', Nbre: '34 V 1 N 4 D 11 KO', Poids: '78 kgs - 80 kgs' };
-var combattant3 = { prenom: "ARISTOTE", nom: "QUITUSIS", age: '26 ans', taille:'178 cms', club: 'Les 7 samourais', Nationnalité: 'Français', Palmarès: '17 combats', Nbre: '14 V 0 N 3 D 4 KO', Poids: '82 kgs - 84 kgs' };
-var combattant4 = { prenom: "SYLLA", nom: "DEMBA", age: '27 ans', taille: '184 cms', club: 'BOXING SCHOOL', Nationnalité: 'Français', Palmarès: '21 combats', Nbre: '12 V 3 N 6 D 2 KO', Poids: '82 kgs - 84 kgs' };
-var combattant5 = { prenom: "MAMADOU", nom: "KONAT", age: '31 ans', taille: '181 cms', club: 'KERNER TEAM', Nationnalité: 'Français', Palmarès: '15 combats', Nbre: '12 V 0 N 3 D 1 KO', Poids: '73 kgs - 76 kgs' };
-var combattant6 = { prenom: "DRIS", nom: "MAKALOU", age: '32 ans', taille: '176 cms', club: 'Badri ROUABHIA', Nationnalité: 'Français', Palmarès: '28 combats', Nbre: '20 V 4 N 4 D 8 KO', Poids: '78 kgs - 80 kgs' };
-var combattant7 = { prenom: "SAMI", nom: "CRAUSER", age: '24 ans', taille:'191 cms', club: 'KERNER TEAM', Nationnalité: 'Français', Palmarès: '19 combats', Nbre: '12 V 3 N 4 D 6 KO', Poids: '84 kgs - 87 kgs' };
-var combattant8 = { prenom: "AMEL", nom: "DEHBY", age: '26 ans', taille:'187 cms', club: 'ZEITOUN', Nationnalité: 'Français', Palmarès: '32 combats', Nbre: '27 V 3 N 2 D 9 KO', Poids: '84 kgs - 87 kgs' };
 
-localStorage.setItem('user1', JSON.stringify(combattant1));
-localStorage.setItem('user2', JSON.stringify(combattant2));
-localStorage.setItem('user3', JSON.stringify(combattant3));
-localStorage.setItem('user4', JSON.stringify(combattant4));
-localStorage.setItem('user5', JSON.stringify(combattant5));
-localStorage.setItem('user6', JSON.stringify(combattant6));
-localStorage.setItem('user7', JSON.stringify(combattant7));
-localStorage.setItem('user8', JSON.stringify(combattant8));
+var combattant0 = { id:0, prenom: "JASON", nom: "QUITUSISA", age: '22 ans', taille: '180 cm', club: 'KERNER TEAM', Nationalité: 'Français', Palmarès: '15 combats', Nbre: '12 V 0 N 3 D 4 KO', poids: '78 kg - 80 kg' };
+var combattant1 = { id:1, prenom: "KARIM", nom: "OUNISSI", age: '24 ans', taille: '172 cm', club: 'Badri ROUABHIA', Nationalité: 'Français', Palmarès: '39 combats', Nbre: '34 V 1 N 4 D 11 KO', poids: '78 kg - 80 kg' };
+var combattant2 = { id:2, prenom: "ARISTOTE", nom: "QUITUSIS", age: '26 ans', taille:'178 cm', club: 'Les 7 samourais', Nationalité: 'Français', Palmarès: '17 combats', Nbre: '14 V 0 N 3 D 4 KO', poids: '82 kg - 84 kg' };
+var combattant3 = { id:3, prenom: "SYLLA", nom: "DEMBA", age: '27 ans', taille: '184 cm', club: 'BOXING SCHOOL', Nationalité: 'Français', Palmarès: '21 combats', Nbre: '12 V 3 N 6 D 2 KO', poids: '82 kg - 84 kg' };
+var combattant4 = { id:4, prenom: "MAMADOU", nom: "KONAT", age: '31 ans', taille: '181 cm', club: 'KERNER TEAM', Nationalité: 'Français', Palmarès: '15 combats', Nbre: '12 V 0 N 3 D 1 KO', poids: '73 kg - 76 kg' };
+var combattant5 = { id:5, prenom: "DRIS", nom: "MAKALOU", age: '32 ans', taille: '176 cm', club: 'Badri ROUABHIA', Nationalité: 'Français', Palmarès: '28 combats', Nbre: '20 V 4 N 4 D 8 KO', poids: '78 kg - 80 kg' };
+var combattant6 = { id:6, prenom: "SAMI", nom: "CRAUSER", age: '24 ans', taille:'191 cm', club: 'KERNER TEAM', Nationalité: 'Français', Palmarès: '19 combats', Nbre: '12 V 3 N 4 D 6 KO', poids: '84 kg - 87 kg' };
+var combattant7 = { id:7, prenom: "AMEL", nom: "DEHBY", age: '26 ans', taille:'187 cm', club: 'ZEITOUN', Nationalité: 'Français', Palmarès: '32 combats', Nbre: '27 V 3 N 2 D 9 KO', poids: '84 kg - 87 kg' };
 
-combattant1 = JSON.parse(localStorage.getItem('user1')) || [];
-combattant2 = JSON.parse(localStorage.getItem('user2')) || [];
-combattant3 = JSON.parse(localStorage.getItem('user3')) || [];
-combattant4 = JSON.parse(localStorage.getItem('user4')) || [];
-combattant5 = JSON.parse(localStorage.getItem('user5')) || [];
-combattant6 = JSON.parse(localStorage.getItem('user6')) || [];
-combattant7 = JSON.parse(localStorage.getItem('user7')) || [];
-combattant8 = JSON.parse(localStorage.getItem('user8')) || [];
+var combattants = [];
+combattants.push(combattant0);
+combattants.push(combattant1);
+combattants.push(combattant2);
+combattants.push(combattant3);
+combattants.push(combattant4);
+combattants.push(combattant5);
+combattants.push(combattant6);
+combattants.push(combattant7);
+
+let valeurCombattant = JSON.parse(localStorage.getItem('combattants'));
+if(valeurCombattant !== undefined){
+  combattants = valeurCombattant;
+}
+
+function indexCombattant(id){
+  for (let index = 0; index < combattants.length; index++) {
+    const element = combattants[index];
+    if(element.id === id){
+      return index;
+    }
+  }
+  return -1;
+}
+
+function localStorageSave(){
+  localStorage.setItem("combattants", JSON.stringify(combattants));
+}
+
+for (let index = 0; index < combattants.length; index++) {
+  const element = combattants[index];
+
+  document.getElementById('prenom' + index).innerHTML= element.prenom;
+  document.getElementById('nom' + index).innerHTML=element.nom;
+  document.getElementById('club' + index).innerHTML=element.club;
+  document.getElementById('nationalité' + index).innerHTML=element.Nationalité;
+  document.getElementById('palmarès' + index).innerHTML=element.Palmarès;
+  document.getElementById('Nbre' + index).innerHTML = element.Nbre;
+  document.getElementById('age' + index).innerHTML =element.age;
+  document.getElementById('taille' + index).innerHTML = element.taille;
+  document.getElementById('poids' + index).innerHTML = element.poids;
+}
 
 
-document.getElementById('prenom1').innerHTML= combattant1.prenom;
-document.getElementById('nom1').innerHTML=combattant1.nom;
-document.getElementById('club1').innerHTML=combattant1.club;
-document.getElementById('nationalité1').innerHTML=combattant1.Nationnalité;
-document.getElementById('palmarès1').innerHTML=combattant1.Palmarès;
-document.getElementById('Nbre1').innerHTML = combattant1.Nbre;
-document.getElementById('age1').innerHTML =combattant1.age;
-document.getElementById('taille1').innerHTML = combattant1.taille;
-document.getElementById('poids1').innerHTML = combattant1.poids;
+var histoire = { texte: "&ensp;&ensp;La genèse, l'histoire ancienne et l'image du muay thaï sont présentées d'une manière standardisée dans une abondante littérature en Thaïlande. Les données historiques les plus anciennes, qui attesteraient de pratiques de boxe avant le XIXe siècle, sont inspirées principalement par les chroniques royales, plusieurs fois réécrites (notamment sous Rama Ier), après les destructions du XVIIIe siècle (chute d'Ayutthaya en 1767). Il est donc difficile de confirmer l'historicité des légendes et de la genèse du muay thai. De même, il ne faut pas ignorer la forte teneur idéologique, notamment nationaliste, qui préside en Thaïlande à la présentation des origines de la boxe thaïlandaise (et du muay-boran), son histoire ancienne, et son image contemporaine. Le combat des fils du roi Sen Muang Ma Selon la tradition, en 1411, à la mort du roi Sen Muang Ma, ses deux fils, Ki et Fang, voulurent s'emparer du pouvoir. Comme leurs armées respectives n'arrivaient pas à se départager sur un champ de bataille, ils décidèrent de régler leur conflit par un duel. Chaque camp choisit son meilleur boxeur. L'homme de Fang fut battu et Ki monta sur le trône. La technique de combat de son guerrier (boxeur) fit école. La popularité du Muay Thaï Au XVIe siècle, la boxe thaïlandaise faisait partie de l'entraînement militaire. Le roi Naresuan le grand (r. 1590-1605) aurait encouragé sa pratique à ce titre. Il atteignit sa plus grande popularité au début du XVIIIe siècle, sous le règne de Pra Chao Sua, 'le Roi Tigre'. C'était le passe-temps favori de la population ; chaque village organisait des combats régulièrement. Le roi, qui était un boxeur de première force s'amusait à défier les champions locaux !" };
+var equipements = { texte: "  &ensp;&ensp;À l'époque, les combattants protégeaient leurs poings en se bandant les mains avec du crin de cheval. Plus tard, le crin fut remplacé par des bandes de coton maintenues avec de la glu. On se servait de coquillages ou d'écorces d'arbres, comme coquille ! Parfois, avec l'accord des deux boxeurs, des morceaux de verre pouvaient être amalgamés dans la glu des bandages. À cette époque, les combats se déroulaient sans catégories de poids ni de limite de temps (combat dit « au finish). <br>La charte du NAKMUAY :<br>MAITRISE<br>RESPECT<br>COURAGE<br>HONNEUR<br>HUMILITÉ<br>LOYAUTÉ<br>FAIR PLAY<br>MORALITÉ" };
+var internationalisation = { texte: "&ensp;&ensp;Le développement du tourisme en Thaïlande a fait découvrir le muay thaï aux autres nations. Il s'est d'abord répandu aux Pays-Bas puis est venu très vite concurrencer en France le full-contact (boxe américaine) et le kick-boxing américain (low-kick), cela dans sa version « garantie d'origine » et dans sa version japonaise, le kick-boxing japonais (ou K-1). En 1966, l'adepte du karaté kyokushinkai Kenji Kurosaki défia un boxeur thaïlandais et fut battu par K.O. au premier round. Après ce combat, il séjourna en Thaïlande plusieurs mois, pour étudier le muay thaï, qu'il introduisit ensuite au Japon sous le nom de kick-boxing."};
 
-document.getElementById('prenom2').innerHTML= combattant2.prenom;
-document.getElementById('nom2').innerHTML=combattant2.nom;
-document.getElementById('club2').innerHTML=combattant2.club;
-document.getElementById('nationalité2').innerHTML=combattant2.Nationnalité;
-document.getElementById('palmarès2').innerHTML=combattant2.Palmarès;
-document.getElementById('Nbre2').innerHTML = combattant2.Nbre;
-document.getElementById('age2').innerHTML =combattant2.age;
-document.getElementById('taille2').innerHTML = combattant2.taille;
-document.getElementById('poids2').innerHTML = combattant2.poids;
+localStorage.setItem('histoire', JSON.stringify(histoire));
+localStorage.setItem('histoire', JSON.stringify(equipements));
+localStorage.setItem('histoire', JSON.stringify(internationalisation));
 
-document.getElementById('prenom3').innerHTML= combattant3.prenom;
-document.getElementById('nom3').innerHTML=combattant3.nom;
-document.getElementById('club3').innerHTML=combattant3.club;
-document.getElementById('nationalité3').innerHTML=combattant3.Nationnalité;
-document.getElementById('palmarès3').innerHTML=combattant3.Palmarès;
-document.getElementById('Nbre3').innerHTML = combattant3.Nbre;
-document.getElementById('age3').innerHTML =combattant3.age;
-document.getElementById('taille3').innerHTML = combattant3.taille;
-document.getElementById('poids3').innerHTML = combattant3.poids;
-
-document.getElementById('prenom4').innerHTML= combattant4.prenom;
-document.getElementById('nom4').innerHTML=combattant4.nom;
-document.getElementById('club4').innerHTML=combattant4.club;
-document.getElementById('nationalité4').innerHTML=combattant4.Nationnalité;
-document.getElementById('palmarès4').innerHTML=combattant4.Palmarès;
-document.getElementById('Nbre4').innerHTML = combattant4.Nbre;
-document.getElementById('age4').innerHTML =combattant4.age;
-document.getElementById('taille4').innerHTML = combattant4.taille;
-document.getElementById('poids4').innerHTML = combattant4.poids;
-
-document.getElementById('prenom5').innerHTML= combattant5.prenom;
-document.getElementById('nom5').innerHTML=combattant5.nom;
-document.getElementById('club5').innerHTML=combattant5.club;
-document.getElementById('nationalité5').innerHTML=combattant5.Nationnalité;
-document.getElementById('palmarès5').innerHTML=combattant5.Palmarès;
-document.getElementById('Nbre5').innerHTML = combattant5.Nbre;
-document.getElementById('age5').innerHTML =combattant5.age;
-document.getElementById('taille5').innerHTML = combattant5.taille;
-document.getElementById('poids5').innerHTML = combattant5.poids;
-
-document.getElementById('prenom6').innerHTML= combattant6.prenom;
-document.getElementById('nom6').innerHTML=combattant6.nom;
-document.getElementById('club6').innerHTML=combattant6.club;
-document.getElementById('nationalité6').innerHTML=combattant6.Nationnalité;
-document.getElementById('palmarès6').innerHTML=combattant6.Palmarès;
-document.getElementById('Nbre6').innerHTML = combattant6.Nbre;
-document.getElementById('age6').innerHTML =combattant6.age;
-document.getElementById('taille6').innerHTML = combattant6.taille;
-document.getElementById('poids6').innerHTML = combattant6.poids;
-
-document.getElementById('prenom7').innerHTML= combattant7.prenom;
-document.getElementById('nom7').innerHTML=combattant7.nom;
-document.getElementById('club7').innerHTML=combattant7.club;
-document.getElementById('nationalité7').innerHTML=combattant7.Nationnalité;
-document.getElementById('palmarès7').innerHTML=combattant7.Palmarès;
-document.getElementById('Nbre7').innerHTML = combattant7.Nbre;
-document.getElementById('age7').innerHTML =combattant7.age;
-document.getElementById('taille7').innerHTML = combattant7.taille;
-document.getElementById('poids7').innerHTML = combattant7.poids;
-
-document.getElementById('prenom8').innerHTML= combattant8.prenom;
-document.getElementById('nom8').innerHTML=combattant8.nom;
-document.getElementById('club8').innerHTML=combattant8.club;
-document.getElementById('nationalité8').innerHTML=combattant8.Nationnalité;
-document.getElementById('palmarès8').innerHTML=combattant8.Palmarès;
-document.getElementById('Nbre8').innerHTML = combattant8.Nbre;
-document.getElementById('age8').innerHTML =combattant8.age;
-document.getElementById('taille8').innerHTML = combattant8.taille;
-document.getElementById('poids8').innerHTML = combattant8.poids;
+document.getElementById('page1').innerHTML= histoire.texte;
+document.getElementById('page2').innerHTML=equipements.texte;
+document.getElementById('page3').innerHTML=internationalisation.texte;
 
 
 /*function bulleDisparition(){
@@ -306,7 +264,6 @@ function openModal(){
         document.getElementById('overlay').style.transition = "500ms";
         document.getElementById('popup').style.transition = "500ms";                         
     }
-
     function closeAvecOverlay(){
         document.getElementById('overlay').style.opacity = "0";
         document.getElementById('popup').style.opacity = "0";
@@ -315,6 +272,75 @@ function openModal(){
         document.getElementById('overlay').style.transition = "500ms";
         document.getElementById('popup').style.transition = "500ms";
     }
+let idpopup = -1;
+    function openModal1(e){    
+      let idd = e.target.id;
+      idpopup = idd;
+      console.log(idd);
+      let combattant = combattants[indexCombattant(parseInt(idd))];
+      console.log(combattant);
+      document.getElementById('prenompopup').value = combattant.prenom;
+      document.getElementById('nompopup').value = combattant.nom;
+      document.getElementById('clubpopup').value = combattant.club;
+      document.getElementById('nationalitepopup').value = combattant.Nationalité;
+      document.getElementById('palmarespopup').value = combattant.Palmarès;
+      document.getElementById('nbrepopup').value = combattant.Nbre;
+      document.getElementById('agepopup').value = combattant.age;
+      document.getElementById('taillepopup').value = combattant.taille;
+      document.getElementById('poidspopup').value = combattant.poids;
+
+      document.getElementById('overlay').style.opacity = "1";
+      document.getElementById('popup1').style.opacity = "1";
+      document.getElementById('overlay').style.zIndex = "102";
+      document.getElementById('popup1').style.zIndex = "110";
+      document.getElementById('overlay').style.transition = "500ms";
+      document.getElementById('popup1').style.transition = "500ms";                         
+  }
+  function closeAvecOverlay(){
+    document.getElementById('overlay').style.opacity = "0";
+    document.getElementById('popup').style.opacity = "0";
+    document.getElementById('popup1').style.opacity = "0";
+    document.getElementById('overlay').style.zIndex = "-1";
+    document.getElementById('popup').style.zIndex = "-2";
+    document.getElementById('popup1').style.zIndex = "-2";
+    document.getElementById('overlay').style.transition = "500ms";
+    document.getElementById('popup').style.transition = "500ms";
+    document.getElementById('popup1').style.transition = "500ms";
+}
+
+function save(e){
+  combattants[indexCombattant(parseInt(idpopup))].nom = document.getElementById('nompopup').value;
+  combattants[indexCombattant(parseInt(idpopup))].prenom = document.getElementById('prenompopup').value;
+  combattants[indexCombattant(parseInt(idpopup))].club = document.getElementById('clubpopup').value;
+  combattants[indexCombattant(parseInt(idpopup))].Nationalité = document.getElementById('nationalitepopup').value;
+  combattants[indexCombattant(parseInt(idpopup))].Palmarès = document.getElementById('palmarespopup').value;
+  combattants[indexCombattant(parseInt(idpopup))].Nbre = document.getElementById('nbrepopup').value;
+  combattants[indexCombattant(parseInt(idpopup))].age = document.getElementById('agepopup').value;
+  combattants[indexCombattant(parseInt(idpopup))].taille = document.getElementById('taillepopup').value;
+  combattants[indexCombattant(parseInt(idpopup))].poids = document.getElementById('poidspopup').value;
+
+
+  let combattant1 = combattants[indexCombattant(parseInt(idpopup))];
+      document.getElementById('prenom' + idpopup).innerHTML= combattant1.prenom;
+      document.getElementById('nom' + idpopup).innerHTML=combattant1.nom;
+      document.getElementById('club' + idpopup).innerHTML=combattant1.club;
+      document.getElementById('nationalité' + idpopup).innerHTML=combattant1.Nationalité;
+      document.getElementById('palmarès' + idpopup).innerHTML=combattant1.Palmarès;
+      document.getElementById('Nbre' + idpopup).innerHTML = combattant1.Nbre;
+      document.getElementById('age' + idpopup).innerHTML =combattant1.age;
+      document.getElementById('taille' + idpopup).innerHTML = combattant1.taille;
+      document.getElementById('poids' + idpopup).innerHTML = combattant1.poids;
+
+      localStorageSave();
+
+  document.getElementById('overlay').style.opacity = "0";
+  document.getElementById('popup1').style.opacity = "0";
+  document.getElementById('overlay').style.zIndex = "-2";
+  document.getElementById('popup1').style.zIndex = "-2";
+  document.getElementById('overlay').style.transition = "500ms";
+  document.getElementById('popup1').style.transition = "500ms";  
+
+}
 
     
 function BasculerVersListe(listeSource, listeDestination){
