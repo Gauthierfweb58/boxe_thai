@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="caracteristiques">afficher les informations</button>
+        <dialog id="boxeur_1">
+            <ul class="combattant_1">
+                <li><strong>CELIA SARRAUTE</strong> </li>
+                <li>Club KERNER TEAM</li>
+                <li>Nationalité : Française</li>
+                <li>15 combats</li>
+                <li>12 V 0 N 3 D 4 KO</li>
+                <li><strong>22 ans 180 cm</strong></li>
+                <li><strong>55 - 57 kgs</strong></li>  
+            </ul>
+        <button id="fermeture">X</button>
+        </dialog>
+        <script>
+    var boxeur1 = document.getElementById('boxeur_1');
+    var btn_affiche = document.getElementById('caracteristiques');
+    var btn_fermeture = document.getElementById('fermeture');
+    btn_affiche.onclick = function() {
+      boxeur1.showModal();
+    }
+    btn_fermeture.onclick = function() {
+      boxeur1.close();
+    }
+    </script>
+</body>
+</html>
+
+
+

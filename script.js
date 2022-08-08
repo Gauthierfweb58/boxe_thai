@@ -125,8 +125,8 @@ mouseEvent.addEventListener("mousemove", (e) => { // e pour event
     mouseEvent.style.left = e.x / window.innerWidth * 100 + "%";//permet de bouger de gauche à droite
     // mouseEvent.style.top = e.y / window.innerHeight * 100 + "%";// permet de bouger de haut en bas
 
-    if (e.x > 1200) {
-        document.body.style.filter = "blur(5px)"; // pour flouter dès que cela dépasse 500px
+    if (e.x > 150) {
+        document.body.style.filter = "blur(15px)"; // pour flouter dès que cela dépasse 500px
     } else {
         document.body.style.filter = "none"; // pas de floutage en dessous
     }
@@ -182,52 +182,58 @@ function scrollFunction() {
     document.getElementById("scroll_to_top").style.zIndex = "-50";
     document.getElementById("scroll_to_top").style.transform = "500ms";
   }
+};
+window.addEventListener('load',horloge);
+      function horloge(){
+        let d = new Date();
+        document.getElementById('heure').innerHTML = d.toLocaleTimeString();
+        setTimeout(horloge, 1000);
 }
-$(document).ready( function () {
-                
-  var canvas = document.getElementById('canvas');
-  var ctx = canvas.getContext('2d');
-  
-  var cursorCanvas= document.getElementById('cursor-canvas');
-  var ctx_cc = cursorCanvas.getContext('2d');
-  
-  //Une fois la page bien ready
-  //l'image de fond est chargée dans un objet Image
-  var img1 = new Image();
-  img1.src = './images/CELIA SARRAUTE.jpeg';
-
-  img1.onload = function(){
-      //L'image dessinée dans le canvas du fond
-      ctx.drawImage(img1,0, 0, 150, 300);
-  };
-  
-  //Le filtre qui floute l'image du fond est appliquée sur le 
-  //canvas du fond
-  ctx.filter = 'blur(5px)';
-
-  //Lorsque le curseur se promène sur l'image
-  //l'image suit le curseur
-  $("#canvas").on("mousemove", function (event) {
-      var x=event.pageX;
-      var y=event.pageY;
-      $("#curseur").css("left",event.pageX);
-      $("#curseur").css("top",event.pageY);
-      
-//L'astuce pour afficher l'image en clair
-//est dans cette seule ligne:
-//img1 c'est l'image sans aucun effet de flou (le flou est appliqué au canvas)
-//Les 4 premiers paramètres de cette fonction précise la portion de l'image
-//que l'on veut afficher en l'occurrence on veut afficher ce qui ce trouve au
-//niveau du curseur : x et y sont les coordonnées du curseur, 50x50 c'est la taille
-// de la zone que l'on veut afficher!
-//Les 4 derniers paramètres sont l'emplacement et la taille de l'image dans
-//le canvas lui même ...
-      if (img1 != undefined) {
-      ctx_cc.drawImage(img1, x, y, 50, 50, 0, 0, 150, 150);
+    
+function BasculerVersListe(listeSource, listeDestination){
+  for(i = 0; i < listeSource.length; i++){
+    if (listeSource.options[i].selected){
+      //on recupere le texte de l'élément sélectionné
+      elementSelectionne = listeSource.options[i].text;
+      //on recupère le nb d'éléments dans la liste destinataire pour positionner le nouvel élément à cet emplacement
+      nbElementsListeDestinataire = listeDestination.length;
+      //on insère le nouvel l'élément dans la liste destinataire
+      listeDestination.options[nbElementsListeDestinataire] = new Option(elementSelectionne);
+      //on supprime l'élément dans la liste source
+      listeSource.options[i] = null;
+    }
   }
-  });
+}
+window.onload = () => {
+  let filters = document.querySelectorAll("#filters div");
 
-});
+  for(let filter of filters){
+      filter.addEventListener("click", function(){
+          let tag = this.id;
 
+          let images = document.querySelectorAll("#gallery img");
+
+          for(let image of images){
+              image.classList.replace("active", "inactive");
+
+              if(tag in image.dataset || tag === "all"){
+                  image.classList.replace("inactive", "active");
+              }
+          }
+      });
+  }
+}
+
+/***************modal  ***********************************************/
+
+var boxeur1 = document.getElementById('boxeur_1');
+    var btn_affiche = document.getElementById('caracteristiques');
+    var btn_fermeture = document.getElementById('fermeture');
+    btn_affiche.onclick = function() {
+      boxeur1.showModal();
+    }
+    btn_fermeture.onclick = function() {
+      boxeur1.close();
+    }
 
 
