@@ -593,35 +593,30 @@ opacity: 0;
     color:white;
     background-image: url(/images/ring.jpg);
 }
-
 .glisser{
     display: flex;
     flex-direction: row;
     width: fit-content;
     height: fit-content;
-
   }
-  
-  .mouseEvent {
-    border: 6px solid rebeccapurple;
+.mouseEvent {
+    border: 6px solid rgb(43, 43, 43);
     width: 100px;
     height: 100px;
     position: absolute;
-    top:5%;
+    top:60px;
     left: 8%;
     transform: translateX(-50%);
-    padding: 10px;
     color:white;
-    background-color: #f38021;
+    background-color: rgb(192, 117, 31);
 }
-
    /* 100% Image Width on Smaller Screens */
    @media only screen and (max-width: 700px){
     .modal-content {
       width: 100%;
     }
   }
-  #Liste1{
+#Liste1{
     font-family:verdana;
     font-size:10;
     width: 250px;
@@ -629,15 +624,15 @@ opacity: 0;
     background-color: rgb(192,117,31);
     color:white;
   }
-  #Liste2{
+#Liste2{
     font-family:verdana;
     font-size:10;
     width: 250px;
     border: dashed 5px rgb(213, 200, 184);
     background-color: rgb(192,117,31);
     color:white;
-  }
-  #filters{
+}
+#filters{
     display: flex;
     gap: 10px
 }
@@ -652,6 +647,10 @@ opacity: 0;
     cursor: pointer;
     color:white;
 
+}
+#filters #all{
+  background-color:rgb(192, 117, 31);
+  
 }
 #filters{
   justify-content: center;
