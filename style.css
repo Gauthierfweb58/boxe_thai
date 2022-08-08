@@ -25,8 +25,9 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background: rgb(34, 34, 34);
+    background: rgb(43, 43, 43);
     min-width: 825px;
+    margin: 0;
 }
 
 /************************************************************Header*************************************/
@@ -248,6 +249,9 @@ nav>ul li:hover .sous{
 .combat_1{
     display: flex;
 }
+.combat_1 .image{
+margin-top: 15px;
+}
 ul {
     list-style-type: none;
     line-height : 30px;
@@ -271,6 +275,7 @@ ul {
   .combattant_2{
     padding-top: 40px;
   }
+  
   .combat_3{
     display: block;
     border: 5px solid black;
@@ -278,7 +283,7 @@ ul {
     width: fit-content;
     padding-right: 20px;
     color:white;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
   }
   
 
@@ -531,7 +536,7 @@ opacity: 0;
     width: 200px;
     position: absolute;
     top:5%;
-    right: 1%;
+    left: 8%;
     transform: translateX(-50%);
     padding: 10px;
     color:white;
@@ -544,7 +549,77 @@ opacity: 0;
       width: 100%;
     }
   }
-  
+  #Liste1{
+    font-family:verdana;
+    font-size:10;
+    width: 250px;
+    border: dashed 5px rgb(213, 200, 184);
+    background-color: #f38021;
+    color:white;
+  }
+  #Liste2{
+    font-family:verdana;
+    font-size:10;
+    width: 250px;
+    border: dashed 5px rgb(213, 200, 184);
+    background-color: #f38021;
+    color:white;
+  }
+  #filters{
+    display: flex;
+    gap: 10px
+}
+
+#filters div{
+    margin-bottom: 10px;
+    border: 1px solid blue;
+    background-color: #cf8a23;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    color:white;
+}
+
+#gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+#gallery .active{
+    width: 30%;
+    padding: 5px;
+    transition: width .3s;
+}
+
+#gallery .inactive{
+    width: 0;
+    padding: 0;
+    transition: width .3s;
+}
+#caracteristiques{
+  border: 5px solid rgba(192, 117, 31, 0.795);
+  position: absolute;
+  top:10%;
+  left: 25%;
+  padding: 3px;
+}
+#boxeur_1{
+  border: 5px solid rgba(192, 117, 31, 0.795);
+  position: absolute;
+  width: 300px;
+  top:20%;
+  left:20%; 
+  background-color: rgb(192, 117, 31, 0.8);
+}
+#fermeture{
+  border: 3px solid white;
+  height: 70px;
+  width: 50px;
+}
+
 
 /***************************************footer**********************************************************************/
 footer{
