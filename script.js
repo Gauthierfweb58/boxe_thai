@@ -1,4 +1,11 @@
+var abc = {name:"JASON", firstname:"Metton", age:22};
 
+localStorage.setItem('user', JSON.stringify(abc));
+
+abc = JSON.parse(localStorage.getItem('user')) || [];
+
+console.log(abc);
+document.getElementById('name1').innerHTML=abc.name;
 /*function bulleDisparition(){
     if(window.innerWidth<=920 && document.getElementById("Checkbox").checked == true){
 }else {
