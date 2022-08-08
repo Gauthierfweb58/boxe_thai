@@ -1,11 +1,11 @@
-var combattant1 = { prenom: "JASON", nom: "QUITUSISA", age: '22 ans', taille: '180 cms', club: 'KERNER TEAM', Nationnalité: 'Français', Palmarès: '15 combats', Nbre: '12 V 0 N 3 D 4 KO', Poids: '78 kgs - 80 kgs' };
-var combattant2 = { prenom: "KARIM", nom: "OUNISSI", age: '24 ans', taille: '172 cms', club: 'Badri ROUABHIA', Nationnalité: 'Français', Palmarès: '39 combats', Nbre: '34 V 1 N 4 D 11 KO', Poids: '78 kgs - 80 kgs' };
-var combattant3 = { prenom: "ARISTOTE", nom: "QUITUSIS", age: '26 ans', taille:'178 cms', club: 'Les 7 samourais', Nationnalité: 'Français', Palmarès: '17 combats', Nbre: '14 V 0 N 3 D 4 KO', Poids: '82 kgs - 84 kgs' };
-var combattant4 = { prenom: "SYLLA", nom: "DEMBA", age: '27 ans', taille: '184 cms', club: 'BOXING SCHOOL', Nationnalité: 'Français', Palmarès: '21 combats', Nbre: '12 V 3 N 6 D 2 KO', Poids: '82 kgs - 84 kgs' };
-var combattant5 = { prenom: "MAMADOU", nom: "KONAT", age: '31 ans', taille: '181 cms', club: 'KERNER TEAM', Nationnalité: 'Français', Palmarès: '15 combats', Nbre: '12 V 0 N 3 D 1 KO', Poids: '73 kgs - 76 kgs' };
-var combattant6 = { prenom: "DRIS", nom: "MAKALOU", age: '32 ans', taille: '176 cms', club: 'Badri ROUABHIA', Nationnalité: 'Français', Palmarès: '28 combats', Nbre: '20 V 4 N 4 D 8 KO', Poids: '78 kgs - 80 kgs' };
-var combattant7 = { prenom: "SAMI", nom: "CRAUSER", age: '24 ans', taille:'191 cms', club: 'KERNER TEAM', Nationnalité: 'Français', Palmarès: '19 combats', Nbre: '12 V 3 N 4 D 6 KO', Poids: '84 kgs - 87 kgs' };
-var combattant8 = { prenom: "AMEL", nom: "DEHBY", age: '26 ans', taille:'187 cms', club: 'ZEITOUN', Nationnalité: 'Français', Palmarès: '32 combats', Nbre: '27 V 3 N 2 D 9 KO', Poids: '84 kgs - 87 kgs' };
+var combattant1 = { prenom: "JASON", nom: "QUITUSISA", age: '22 ans', taille: '180 cms', club: 'KERNER TEAM', Nationnalité: 'Français', Palmarès: '15 combats', Nbre: '12 V 0 N 3 D 4 KO', poids: '78 kgs - 80 kgs' };
+var combattant2 = { prenom: "KARIM", nom: "OUNISSI", age: '24 ans', taille: '172 cms', club: 'Badri ROUABHIA', Nationnalité: 'Français', Palmarès: '39 combats', Nbre: '34 V 1 N 4 D 11 KO', poids: '78 kgs - 80 kgs' };
+var combattant3 = { prenom: "ARISTOTE", nom: "QUITUS", age: '26 ans', taille:'178 cms', club: 'Les 7 samourais', Nationnalité: 'Français', Palmarès: '17 combats', Nbre: '14 V 0 N 3 D 4 KO', poids: '82 kgs - 84 kgs' };
+var combattant4 = { prenom: "SYLLA", nom: "DEMBA", age: '27 ans', taille: '184 cms', club: 'BOXING SCHOOL', Nationnalité: 'Français', Palmarès: '21 combats', Nbre: '12 V 3 N 6 D 2 KO', poids: '82 kgs - 84 kgs' };
+var combattant5 = { prenom: "MAMADOU", nom: "KONAT", age: '31 ans', taille: '181 cms', club: 'KERNER TEAM', Nationnalité: 'Français', Palmarès: '15 combats', Nbre: '12 V 0 N 3 D 1 KO', poids: '73 kgs - 76 kgs' };
+var combattant6 = { prenom: "DRIS", nom: "MAKALOU", age: '32 ans', taille: '176 cms', club: 'Badri ROUABHIA', Nationnalité: 'Français', Palmarès: '28 combats', Nbre: '20 V 4 N 4 D 8 KO', poids: '78 kgs - 80 kgs' };
+var combattant7 = { prenom: "SAMHIR", nom: "CRAUSER", age: '24 ans', taille:'191 cms', club: 'KERNER TEAM', Nationnalité: 'Français', Palmarès: '19 combats', Nbre: '12 V 3 N 4 D 6 KO', poids: '84 kgs - 87 kgs' };
+var combattant8 = { prenom: "AMEL", nom: "DEHBY", age: '26 ans', taille:'187 cms', club: 'ZEITOUN', Nationnalité: 'Français', Palmarès: '32 combats', Nbre: '27 V 3 N 2 D 9 KO', poids: '84 kgs - 87 kgs' };
 
 localStorage.setItem('user1', JSON.stringify(combattant1));
 localStorage.setItem('user2', JSON.stringify(combattant2));
