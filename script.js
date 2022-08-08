@@ -120,13 +120,13 @@ const vertical = document.querySelector(".vertical");
 
 mouseEvent.addEventListener("mousemove", (e) => { // e pour event
     // console.log(event);
-    horizontal.innerHTML = e.x;
-    vertical.innerHTML = e.y;
+    /*horizontal.innerHTML = e.x;
+    vertical.innerHTML = e.y;*/
     mouseEvent.style.left = e.x / window.innerWidth * 100 + "%";//permet de bouger de gauche à droite
     // mouseEvent.style.top = e.y / window.innerHeight * 100 + "%";// permet de bouger de haut en bas
 
-    if (e.x > 150) {
-        document.body.style.filter = "blur(15px)"; // pour flouter dès que cela dépasse 500px
+    if (e.x > 1600) {
+        document.body.style.filter = "blur(10px)"; // pour flouter dès que cela dépasse 500px
     } else {
         document.body.style.filter = "none"; // pas de floutage en dessous
     }
@@ -243,6 +243,31 @@ window.onload = () => {
   }
 }
 
+function chgt_background1() {
+  document.getElementById("all").style.backgroundColor = "rgb(192,117,31)";
+  document.getElementById("75_kgs").style.backgroundColor = "rgb(0,0,0)";
+  document.getElementById("80_kgs").style.backgroundColor = "rgb(0,0,0)";
+  document.getElementById("84_kgs").style.backgroundColor = "rgb(0,0,0)";
+}
+
+function chgt_background2() {
+  document.getElementById("all").style.backgroundColor = "rgb(0,0,0)";
+  document.getElementById("75_kgs").style.backgroundColor ="rgb(192,117,31)";
+  document.getElementById("80_kgs").style.backgroundColor = "rgb(0,0,0)";
+  document.getElementById("84_kgs").style.backgroundColor = "rgb(0,0,0)";
+}
+function chgt_background3() {
+  document.getElementById("all").style.backgroundColor = "rgb(0,0,0)";
+  document.getElementById("75_kgs").style.backgroundColor = "rgb(0,0,0)";
+  document.getElementById("80_kgs").style.backgroundColor = "rgb(192,117,31)";
+  document.getElementById("84_kgs").style.backgroundColor = "rgb(0,0,0)";
+}
+function chgt_background4() {
+  document.getElementById("all").style.backgroundColor = "rgb(0,0,0)";
+  document.getElementById("75_kgs").style.backgroundColor = "rgb(0,0,0)";
+  document.getElementById("80_kgs").style.backgroundColor = "rgb(0,0,0)";
+  document.getElementById("84_kgs").style.backgroundColor = "rgb(192,117,31)";
+}
 /***************modal  ***********************************************/
 
 var boxeur1 = document.getElementById('boxeur_1');
