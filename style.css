@@ -625,7 +625,7 @@ opacity: 0;
     font-family:verdana;
     font-size:10;
     width: 250px;
-    border: dashed 5px rgb(213, 200, 184);
+    border: dashed 5px gray;
     background-color: rgb(192,117,31);
     color:white;
   }
@@ -633,9 +633,16 @@ opacity: 0;
     font-family:verdana;
     font-size:10;
     width: 250px;
-    border: dashed 5px rgb(213, 200, 184);
+    border: dashed 5px gray;
     background-color: rgb(192,117,31);
     color:white;
+  }
+
+  .plateau{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
   #filters{
     display: flex;
