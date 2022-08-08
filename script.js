@@ -1,4 +1,5 @@
 
+
 var combattant0 = { id:0, prenom: "JASON", nom: "QUITUSISA", age: '22 ans', taille: '180 cm', club: 'KERNER TEAM', Nationalité: 'Français', Palmarès: '15 combats', Nbre: '12 V 0 N 3 D 4 KO', poids: '78 kg - 80 kg' };
 var combattant1 = { id:1, prenom: "KARIM", nom: "OUNISSI", age: '24 ans', taille: '172 cm', club: 'Badri ROUABHIA', Nationalité: 'Français', Palmarès: '39 combats', Nbre: '34 V 1 N 4 D 11 KO', poids: '78 kg - 80 kg' };
 var combattant2 = { id:2, prenom: "ARISTOTE", nom: "QUITUSIS", age: '26 ans', taille:'178 cm', club: 'Les 7 samourais', Nationalité: 'Français', Palmarès: '17 combats', Nbre: '14 V 0 N 3 D 4 KO', poids: '82 kg - 84 kg' };
