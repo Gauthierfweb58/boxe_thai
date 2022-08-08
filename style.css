@@ -233,6 +233,71 @@ nav>ul li:hover .sous{
   }
   
 /********************************************Section2*****************************************/
+#recherche {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  color: rgb(192, 117, 31);
+}
+
+#recherche .barre {
+  background: url(../images/loupe.svg) center no-repeat;
+  background-size: contain;
+  border: none;
+  height: 34px;
+  width: 34px;
+  cursor: pointer;
+  transition: transform 125ms;
+  animation: retrecissement_recherche 625ms;
+  color: rgb(192, 117, 31);
+}
+
+#recherche .barre:hover {
+  transform: scale(120%);
+}
+
+#recherche .barre:focus {
+  background: none;
+  border: solid 1px rgb(192, 117, 31);
+  height: 21px;
+  width: 380px;
+  color: whitesmoke;
+  cursor: text;
+  transform: scale(100%);
+  animation: elargissement_recherche 500ms;
+}
+@keyframes elargissement_recherche {
+  from {
+      width: 0px;
+  }
+  to {
+      width: 380px;
+  }
+}
+
+@keyframes retrecissement_recherche {
+  from {
+      background: none;
+      border: solid 1px rgb(192, 117, 31);
+
+      width: 380px;
+      height: 21px;
+  }
+  20% {
+      background: none;
+      border: solid 1px rgb(192, 117, 31);
+
+      width: 380px;
+      height: 21px;
+  }
+  to {
+      background: none;
+      border: solid 1px rgb(192, 117, 31);
+
+      width: 0px;
+      height: 21px;
+  }
+}
 .dernierCbt{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -434,6 +499,12 @@ opacity: 0;
   }
 /*********************************SECTION 3***********************************************/
 /********************************************histoire boxe thai***************************************************/
+#section_3 h1{
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  margin-top: 50px;
+}
 #onglets {
     display: flex;
     flex-direction: row;
@@ -554,7 +625,7 @@ opacity: 0;
     font-size:10;
     width: 250px;
     border: dashed 5px rgb(213, 200, 184);
-    background-color: #f38021;
+    background-color: rgb(192,117,31);
     color:white;
   }
   #Liste2{
@@ -562,7 +633,7 @@ opacity: 0;
     font-size:10;
     width: 250px;
     border: dashed 5px rgb(213, 200, 184);
-    background-color: #f38021;
+    background-color: rgb(192,117,31);
     color:white;
   }
   #filters{
@@ -572,7 +643,6 @@ opacity: 0;
 
 #filters div{
     margin-bottom: 10px;
-    border: 1px solid blue;
     background-color: #cf8a23;
     padding: 5px;
     border-radius: 20px;
