@@ -1,11 +1,112 @@
-var abc = {name:"JASON", firstname:"Metton", age:22};
+var combattant1 = { prenom: "JASON", nom: "QUITUSISA", age: '22 ans', taille: '180 cms', club: 'KERNER TEAM', Nationnalité: 'Français', Palmarès: '15 combats', Nbre: '12 V 0 N 3 D 4 KO', Poids: '78 kgs - 80 kgs' };
+var combattant2 = { prenom: "KARIM", nom: "OUNISSI", age: '24 ans', taille: '172 cms', club: 'Badri ROUABHIA', Nationnalité: 'Français', Palmarès: '39 combats', Nbre: '34 V 1 N 4 D 11 KO', Poids: '78 kgs - 80 kgs' };
+var combattant3 = { prenom: "ARISTOTE", nom: "QUITUSIS", age: '26 ans', taille:'178 cms', club: 'Les 7 samourais', Nationnalité: 'Français', Palmarès: '17 combats', Nbre: '14 V 0 N 3 D 4 KO', Poids: '82 kgs - 84 kgs' };
+var combattant4 = { prenom: "SYLLA", nom: "DEMBA", age: '27 ans', taille: '184 cms', club: 'BOXING SCHOOL', Nationnalité: 'Français', Palmarès: '21 combats', Nbre: '12 V 3 N 6 D 2 KO', Poids: '82 kgs - 84 kgs' };
+var combattant5 = { prenom: "MAMADOU", nom: "KONAT", age: '31 ans', taille: '181 cms', club: 'KERNER TEAM', Nationnalité: 'Français', Palmarès: '15 combats', Nbre: '12 V 0 N 3 D 1 KO', Poids: '73 kgs - 76 kgs' };
+var combattant6 = { prenom: "DRIS", nom: "MAKALOU", age: '32 ans', taille: '176 cms', club: 'Badri ROUABHIA', Nationnalité: 'Français', Palmarès: '28 combats', Nbre: '20 V 4 N 4 D 8 KO', Poids: '78 kgs - 80 kgs' };
+var combattant7 = { prenom: "SAMI", nom: "CRAUSER", age: '24 ans', taille:'191 cms', club: 'KERNER TEAM', Nationnalité: 'Français', Palmarès: '19 combats', Nbre: '12 V 3 N 4 D 6 KO', Poids: '84 kgs - 87 kgs' };
+var combattant8 = { prenom: "AMEL", nom: "DEHBY", age: '26 ans', taille:'187 cms', club: 'ZEITOUN', Nationnalité: 'Français', Palmarès: '32 combats', Nbre: '27 V 3 N 2 D 9 KO', Poids: '84 kgs - 87 kgs' };
 
-localStorage.setItem('user', JSON.stringify(abc));
+localStorage.setItem('user1', JSON.stringify(combattant1));
+localStorage.setItem('user2', JSON.stringify(combattant2));
+localStorage.setItem('user3', JSON.stringify(combattant3));
+localStorage.setItem('user4', JSON.stringify(combattant4));
+localStorage.setItem('user5', JSON.stringify(combattant5));
+localStorage.setItem('user6', JSON.stringify(combattant6));
+localStorage.setItem('user7', JSON.stringify(combattant7));
+localStorage.setItem('user8', JSON.stringify(combattant8));
 
-abc = JSON.parse(localStorage.getItem('user')) || [];
+combattant1 = JSON.parse(localStorage.getItem('user1')) || [];
+combattant2 = JSON.parse(localStorage.getItem('user2')) || [];
+combattant3 = JSON.parse(localStorage.getItem('user3')) || [];
+combattant4 = JSON.parse(localStorage.getItem('user4')) || [];
+combattant5 = JSON.parse(localStorage.getItem('user5')) || [];
+combattant6 = JSON.parse(localStorage.getItem('user6')) || [];
+combattant7 = JSON.parse(localStorage.getItem('user7')) || [];
+combattant8 = JSON.parse(localStorage.getItem('user8')) || [];
 
-console.log(abc);
-document.getElementById('name1').innerHTML=abc.name;
+
+document.getElementById('prenom1').innerHTML= combattant1.prenom;
+document.getElementById('nom1').innerHTML=combattant1.nom;
+document.getElementById('club1').innerHTML=combattant1.club;
+document.getElementById('nationalité1').innerHTML=combattant1.Nationnalité;
+document.getElementById('palmarès1').innerHTML=combattant1.Palmarès;
+document.getElementById('Nbre1').innerHTML = combattant1.Nbre;
+document.getElementById('age1').innerHTML =combattant1.age;
+document.getElementById('taille1').innerHTML = combattant1.taille;
+document.getElementById('poids1').innerHTML = combattant1.poids;
+
+document.getElementById('prenom2').innerHTML= combattant2.prenom;
+document.getElementById('nom2').innerHTML=combattant2.nom;
+document.getElementById('club2').innerHTML=combattant2.club;
+document.getElementById('nationalité2').innerHTML=combattant2.Nationnalité;
+document.getElementById('palmarès2').innerHTML=combattant2.Palmarès;
+document.getElementById('Nbre2').innerHTML = combattant2.Nbre;
+document.getElementById('age2').innerHTML =combattant2.age;
+document.getElementById('taille2').innerHTML = combattant2.taille;
+document.getElementById('poids2').innerHTML = combattant2.poids;
+
+document.getElementById('prenom3').innerHTML= combattant3.prenom;
+document.getElementById('nom3').innerHTML=combattant3.nom;
+document.getElementById('club3').innerHTML=combattant3.club;
+document.getElementById('nationalité3').innerHTML=combattant3.Nationnalité;
+document.getElementById('palmarès3').innerHTML=combattant3.Palmarès;
+document.getElementById('Nbre3').innerHTML = combattant3.Nbre;
+document.getElementById('age3').innerHTML =combattant3.age;
+document.getElementById('taille3').innerHTML = combattant3.taille;
+document.getElementById('poids3').innerHTML = combattant3.poids;
+
+document.getElementById('prenom4').innerHTML= combattant4.prenom;
+document.getElementById('nom4').innerHTML=combattant4.nom;
+document.getElementById('club4').innerHTML=combattant4.club;
+document.getElementById('nationalité4').innerHTML=combattant4.Nationnalité;
+document.getElementById('palmarès4').innerHTML=combattant4.Palmarès;
+document.getElementById('Nbre4').innerHTML = combattant4.Nbre;
+document.getElementById('age4').innerHTML =combattant4.age;
+document.getElementById('taille4').innerHTML = combattant4.taille;
+document.getElementById('poids4').innerHTML = combattant4.poids;
+
+document.getElementById('prenom5').innerHTML= combattant5.prenom;
+document.getElementById('nom5').innerHTML=combattant5.nom;
+document.getElementById('club5').innerHTML=combattant5.club;
+document.getElementById('nationalité5').innerHTML=combattant5.Nationnalité;
+document.getElementById('palmarès5').innerHTML=combattant5.Palmarès;
+document.getElementById('Nbre5').innerHTML = combattant5.Nbre;
+document.getElementById('age5').innerHTML =combattant5.age;
+document.getElementById('taille5').innerHTML = combattant5.taille;
+document.getElementById('poids5').innerHTML = combattant5.poids;
+
+document.getElementById('prenom6').innerHTML= combattant6.prenom;
+document.getElementById('nom6').innerHTML=combattant6.nom;
+document.getElementById('club6').innerHTML=combattant6.club;
+document.getElementById('nationalité6').innerHTML=combattant6.Nationnalité;
+document.getElementById('palmarès6').innerHTML=combattant6.Palmarès;
+document.getElementById('Nbre6').innerHTML = combattant6.Nbre;
+document.getElementById('age6').innerHTML =combattant6.age;
+document.getElementById('taille6').innerHTML = combattant6.taille;
+document.getElementById('poids6').innerHTML = combattant6.poids;
+
+document.getElementById('prenom7').innerHTML= combattant7.prenom;
+document.getElementById('nom7').innerHTML=combattant7.nom;
+document.getElementById('club7').innerHTML=combattant7.club;
+document.getElementById('nationalité7').innerHTML=combattant7.Nationnalité;
+document.getElementById('palmarès7').innerHTML=combattant7.Palmarès;
+document.getElementById('Nbre7').innerHTML = combattant7.Nbre;
+document.getElementById('age7').innerHTML =combattant7.age;
+document.getElementById('taille7').innerHTML = combattant7.taille;
+document.getElementById('poids7').innerHTML = combattant7.poids;
+
+document.getElementById('prenom8').innerHTML= combattant8.prenom;
+document.getElementById('nom8').innerHTML=combattant8.nom;
+document.getElementById('club8').innerHTML=combattant8.club;
+document.getElementById('nationalité8').innerHTML=combattant8.Nationnalité;
+document.getElementById('palmarès8').innerHTML=combattant8.Palmarès;
+document.getElementById('Nbre8').innerHTML = combattant8.Nbre;
+document.getElementById('age8').innerHTML =combattant8.age;
+document.getElementById('taille8').innerHTML = combattant8.taille;
+document.getElementById('poids8').innerHTML = combattant8.poids;
+
+
 /*function bulleDisparition(){
     if(window.innerWidth<=920 && document.getElementById("Checkbox").checked == true){
 }else {
