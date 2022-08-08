@@ -280,5 +280,23 @@ var boxeur1 = document.getElementById('boxeur_1');
       boxeur1.close();
     }
 
+/***************************Search barre ********************************/
 
+const searchBar = document.getElementById('barreSearch');
+
+searchBar.addEventListener('keyup', (e) => {
+    const searchedLetters = e.target.value;
+    const cards = document.querySelectorAll('.combat_3');
+    filterElements(searchedLetters, cards);
+})
+
+    function filterElements(letters, elements){
+        for(let i=0; i<elements.length; i++){
+        if(elements[i].textContent.toLowerCase().includes(letters)) {
+            elements[i].style.display = "block";
+        } else {
+            elements[i].style.display = "none";
+        } 
+    }
+    }
 
