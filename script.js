@@ -189,6 +189,25 @@ window.addEventListener('load',horloge);
         document.getElementById('heure').innerHTML = d.toLocaleTimeString();
         setTimeout(horloge, 1000);
 }
+
+function openModal(){    
+        document.getElementById('overlay').style.opacity = "1";
+        document.getElementById('popup').style.opacity = "1";
+        document.getElementById('overlay').style.zIndex = "102";
+        document.getElementById('popup').style.zIndex = "110";
+        document.getElementById('overlay').style.transition = "500ms";
+        document.getElementById('popup').style.transition = "500ms";                         
+    }
+
+    function closeAvecOverlay(){
+        document.getElementById('overlay').style.opacity = "0";
+        document.getElementById('popup').style.opacity = "0";
+        document.getElementById('overlay').style.zIndex = "-1";
+        document.getElementById('popup').style.zIndex = "-2";
+        document.getElementById('overlay').style.transition = "500ms";
+        document.getElementById('popup').style.transition = "500ms";
+    }
+
     
 function BasculerVersListe(listeSource, listeDestination){
   for(i = 0; i < listeSource.length; i++){
@@ -235,5 +254,6 @@ var boxeur1 = document.getElementById('boxeur_1');
     btn_fermeture.onclick = function() {
       boxeur1.close();
     }
+
 
 
