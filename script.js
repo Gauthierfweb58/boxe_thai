@@ -60,9 +60,7 @@ btn.forEach(element => {
 
 });
 btn.forEach(element => {
-    console.log(element);
       element.addEventListener('click', (e) => { //()=> veut dire fonction nouvelle écriture en javascript
-        console.log(e.target.parentNode.parentNode);
           let vumain = e.target.parentNode.parentNode.querySelector(".visible");
           if(vumain.classList.contains("vu")) {
               vumain.classList.remove("vu");
@@ -127,8 +125,8 @@ mouseEvent.addEventListener("mousemove", (e) => { // e pour event
     mouseEvent.style.left = e.x / window.innerWidth * 100 + "%";//permet de bouger de gauche à droite
     // mouseEvent.style.top = e.y / window.innerHeight * 100 + "%";// permet de bouger de haut en bas
 
-    if (e.x > 1200) {
-        document.body.style.filter = "blur(5px)"; // pour flouter dès que cela dépasse 500px
+    if (e.x > 150) {
+        document.body.style.filter = "blur(15px)"; // pour flouter dès que cela dépasse 500px
     } else {
         document.body.style.filter = "none"; // pas de floutage en dessous
     }
@@ -184,4 +182,58 @@ function scrollFunction() {
     document.getElementById("scroll_to_top").style.zIndex = "-50";
     document.getElementById("scroll_to_top").style.transform = "500ms";
   }
+};
+window.addEventListener('load',horloge);
+      function horloge(){
+        let d = new Date();
+        document.getElementById('heure').innerHTML = d.toLocaleTimeString();
+        setTimeout(horloge, 1000);
 }
+    
+function BasculerVersListe(listeSource, listeDestination){
+  for(i = 0; i < listeSource.length; i++){
+    if (listeSource.options[i].selected){
+      //on recupere le texte de l'élément sélectionné
+      elementSelectionne = listeSource.options[i].text;
+      //on recupère le nb d'éléments dans la liste destinataire pour positionner le nouvel élément à cet emplacement
+      nbElementsListeDestinataire = listeDestination.length;
+      //on insère le nouvel l'élément dans la liste destinataire
+      listeDestination.options[nbElementsListeDestinataire] = new Option(elementSelectionne);
+      //on supprime l'élément dans la liste source
+      listeSource.options[i] = null;
+    }
+  }
+}
+window.onload = () => {
+  let filters = document.querySelectorAll("#filters div");
+
+  for(let filter of filters){
+      filter.addEventListener("click", function(){
+          let tag = this.id;
+
+          let images = document.querySelectorAll("#gallery img");
+
+          for(let image of images){
+              image.classList.replace("active", "inactive");
+
+              if(tag in image.dataset || tag === "all"){
+                  image.classList.replace("inactive", "active");
+              }
+          }
+      });
+  }
+}
+
+/***************modal  ***********************************************/
+
+var boxeur1 = document.getElementById('boxeur_1');
+    var btn_affiche = document.getElementById('caracteristiques');
+    var btn_fermeture = document.getElementById('fermeture');
+    btn_affiche.onclick = function() {
+      boxeur1.showModal();
+    }
+    btn_fermeture.onclick = function() {
+      boxeur1.close();
+    }
+
+
