@@ -293,25 +293,27 @@
 <section id="section_3">
 <h1>HISTORIQUE</h1>
     <div id="onglets">
-        <ul>
-         <li><button class="bouton_onglet"><a href="#onglet-1">Histoire de la boxe thai</a></button></li>
-         <li><button class="bouton_onglet"><a href="#onglet-2">Les premiers équipements des boxeurs</a></button></li>
-         <li><button class="bouton_onglet"><a href="#onglet-3">Internationalisation de la boxe thaïlandaise</a></button></li>
+        <ul id="onglet_ul">
+         <li><button class="bouton_onglet"><a id="r0" href="#onglet-0"></a></button></li>
+         <li><button class="bouton_onglet"><a id="r1" href="#onglet-1"></a></button></li>
+         <li><button class="bouton_onglet"><a id="r2" href="#onglet-2"></a></button></li>
         </ul>
-        <div id="onglet-1">
-          <p id="page1">
-</p>
+        <div id="onglet-0">
+            <p id="t0">
+
+            </p>
         </div>
-        <div id="onglet-2">
-          <p id="page2">
+        <div id="onglet-1">
+          <p id="t1">
 
         </p>
         </div>
-        <div id="onglet-3">
-          <p id="page3" style="margin-bottom: 10px;"></p>
+        <div id="onglet-2">
+          <p id="t2" style="margin-bottom: 10px;"></p>
        
             <img src="images/prestige-fight-galas-prestigieux-muay-thai.jpg" width="200px" height="200px" alt="" style="margin-left:10px">
-          </div>
+        </div>
+
       </div>
 
  <h1 style="margin-bottom:10px">PRET A COMBATTRE, GLISSEZ DEPOSEZ VOS 2 BOXEURS</h1>
@@ -529,8 +531,22 @@
                     <input type="text" id="poidspopup">
                 </div>
                 <button onclick="save(event)">Save</button>
+            </div> 
         </div> 
-    </div>
+        <div id="popup2">
+            <div class="divpopup">
+                <div>
+                    <label>Titre :</label>
+                    <input type="textarea" id="titrepopup" >
+                </div>
+                <div>
+                    <label>Texte :</label>
+                    <textarea type="textarea" id="textpopup" ></textarea>
+                </div>
+
+                <button onclick="save1(event)">Save</button>
+            </div> 
+        </div>
 
 
 <script src="JS/carrousel_v2.js"></script>

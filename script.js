@@ -52,18 +52,44 @@ for (let index = 0; index < combattants.length; index++) {
   document.getElementById('poids' + index).innerHTML = element.poids;
 }
 
+let idOnglet = 3;
+var histoire = {id:0, titre: "Histoire de la boxe thai", texte: "&ensp;&ensp;La genèse, l'histoire ancienne et l'image du muay thaï sont présentées d'une manière standardisée dans une abondante littérature en Thaïlande. Les données historiques les plus anciennes, qui attesteraient de pratiques de boxe avant le XIXe siècle, sont inspirées principalement par les chroniques royales, plusieurs fois réécrites (notamment sous Rama Ier), après les destructions du XVIIIe siècle (chute d'Ayutthaya en 1767). Il est donc difficile de confirmer l'historicité des légendes et de la genèse du muay thai. De même, il ne faut pas ignorer la forte teneur idéologique, notamment nationaliste, qui préside en Thaïlande à la présentation des origines de la boxe thaïlandaise (et du muay-boran), son histoire ancienne, et son image contemporaine. Le combat des fils du roi Sen Muang Ma Selon la tradition, en 1411, à la mort du roi Sen Muang Ma, ses deux fils, Ki et Fang, voulurent s'emparer du pouvoir. Comme leurs armées respectives n'arrivaient pas à se départager sur un champ de bataille, ils décidèrent de régler leur conflit par un duel. Chaque camp choisit son meilleur boxeur. L'homme de Fang fut battu et Ki monta sur le trône. La technique de combat de son guerrier (boxeur) fit école. La popularité du Muay Thaï Au XVIe siècle, la boxe thaïlandaise faisait partie de l'entraînement militaire. Le roi Naresuan le grand (r. 1590-1605) aurait encouragé sa pratique à ce titre. Il atteignit sa plus grande popularité au début du XVIIIe siècle, sous le règne de Pra Chao Sua, 'le Roi Tigre'. C'était le passe-temps favori de la population ; chaque village organisait des combats régulièrement. Le roi, qui était un boxeur de première force s'amusait à défier les champions locaux ! <br><button id='0' onclick='openModal2(event)'>Modifier</button>" };
+var equipements = {id:1, titre: "Les premiers équipements des boxeurs", texte: "  &ensp;&ensp;À l'époque, les combattants protégeaient leurs poings en se bandant les mains avec du crin de cheval. Plus tard, le crin fut remplacé par des bandes de coton maintenues avec de la glu. On se servait de coquillages ou d'écorces d'arbres, comme coquille ! Parfois, avec l'accord des deux boxeurs, des morceaux de verre pouvaient être amalgamés dans la glu des bandages. À cette époque, les combats se déroulaient sans catégories de poids ni de limite de temps (combat dit « au finish). <br>La charte du NAKMUAY :<br>MAITRISE<br>RESPECT<br>COURAGE<br>HONNEUR<br>HUMILITÉ<br>LOYAUTÉ<br>FAIR PLAY<br>MORALITÉ <br><button id='1' onclick='openModal2(event)'>Modifier</button>" };
+var internationalisation = {id:2, titre: "Internationalisation de la boxe thailandaise", texte: "&ensp;&ensp;Le développement du tourisme en Thaïlande a fait découvrir le muay thaï aux autres nations. Il s'est d'abord répandu aux Pays-Bas puis est venu très vite concurrencer en France le full-contact (boxe américaine) et le kick-boxing américain (low-kick), cela dans sa version « garantie d'origine » et dans sa version japonaise, le kick-boxing japonais (ou K-1). En 1966, l'adepte du karaté kyokushinkai Kenji Kurosaki défia un boxeur thaïlandais et fut battu par K.O. au premier round. Après ce combat, il séjourna en Thaïlande plusieurs mois, pour étudier le muay thaï, qu'il introduisit ensuite au Japon sous le nom de kick-boxing. <br><button id='2' onclick='openModal2(event)'>Modifier</button>"};
 
-var histoire = { texte: "&ensp;&ensp;La genèse, l'histoire ancienne et l'image du muay thaï sont présentées d'une manière standardisée dans une abondante littérature en Thaïlande. Les données historiques les plus anciennes, qui attesteraient de pratiques de boxe avant le XIXe siècle, sont inspirées principalement par les chroniques royales, plusieurs fois réécrites (notamment sous Rama Ier), après les destructions du XVIIIe siècle (chute d'Ayutthaya en 1767). Il est donc difficile de confirmer l'historicité des légendes et de la genèse du muay thai. De même, il ne faut pas ignorer la forte teneur idéologique, notamment nationaliste, qui préside en Thaïlande à la présentation des origines de la boxe thaïlandaise (et du muay-boran), son histoire ancienne, et son image contemporaine. Le combat des fils du roi Sen Muang Ma Selon la tradition, en 1411, à la mort du roi Sen Muang Ma, ses deux fils, Ki et Fang, voulurent s'emparer du pouvoir. Comme leurs armées respectives n'arrivaient pas à se départager sur un champ de bataille, ils décidèrent de régler leur conflit par un duel. Chaque camp choisit son meilleur boxeur. L'homme de Fang fut battu et Ki monta sur le trône. La technique de combat de son guerrier (boxeur) fit école. La popularité du Muay Thaï Au XVIe siècle, la boxe thaïlandaise faisait partie de l'entraînement militaire. Le roi Naresuan le grand (r. 1590-1605) aurait encouragé sa pratique à ce titre. Il atteignit sa plus grande popularité au début du XVIIIe siècle, sous le règne de Pra Chao Sua, 'le Roi Tigre'. C'était le passe-temps favori de la population ; chaque village organisait des combats régulièrement. Le roi, qui était un boxeur de première force s'amusait à défier les champions locaux !" };
-var equipements = { texte: "  &ensp;&ensp;À l'époque, les combattants protégeaient leurs poings en se bandant les mains avec du crin de cheval. Plus tard, le crin fut remplacé par des bandes de coton maintenues avec de la glu. On se servait de coquillages ou d'écorces d'arbres, comme coquille ! Parfois, avec l'accord des deux boxeurs, des morceaux de verre pouvaient être amalgamés dans la glu des bandages. À cette époque, les combats se déroulaient sans catégories de poids ni de limite de temps (combat dit « au finish). <br>La charte du NAKMUAY :<br>MAITRISE<br>RESPECT<br>COURAGE<br>HONNEUR<br>HUMILITÉ<br>LOYAUTÉ<br>FAIR PLAY<br>MORALITÉ" };
-var internationalisation = { texte: "&ensp;&ensp;Le développement du tourisme en Thaïlande a fait découvrir le muay thaï aux autres nations. Il s'est d'abord répandu aux Pays-Bas puis est venu très vite concurrencer en France le full-contact (boxe américaine) et le kick-boxing américain (low-kick), cela dans sa version « garantie d'origine » et dans sa version japonaise, le kick-boxing japonais (ou K-1). En 1966, l'adepte du karaté kyokushinkai Kenji Kurosaki défia un boxeur thaïlandais et fut battu par K.O. au premier round. Après ce combat, il séjourna en Thaïlande plusieurs mois, pour étudier le muay thaï, qu'il introduisit ensuite au Japon sous le nom de kick-boxing."};
+var histoires = [];
+histoires.push(histoire);
+histoires.push(equipements);
+histoires.push(internationalisation);
 
-localStorage.setItem('histoire', JSON.stringify(histoire));
-localStorage.setItem('histoire', JSON.stringify(equipements));
-localStorage.setItem('histoire', JSON.stringify(internationalisation));
+let valeurHistoire = JSON.parse(localStorage.getItem('histoires'));
+if(valeurHistoire !== undefined){
+  histoires = valeurHistoire;
+}
 
-document.getElementById('page1').innerHTML= histoire.texte;
-document.getElementById('page2').innerHTML=equipements.texte;
-document.getElementById('page3').innerHTML=internationalisation.texte;
+function indexhistoire(id){
+  for (let index = 0; index < histoires.length; index++) {
+    const element = histoires[index];
+    if(element.id === id){
+      return index;
+    }
+  }
+  return -1;
+}
+
+function localStorageSave2(){
+  localStorage.setItem("histoires", JSON.stringify(histoires));
+  localStorage.setItem("onglets", idOnglet);
+}
+
+for (let index = 0; index < histoires.length; index++) {
+  const element1 = histoires[index];
+if(document.getElementById('t' + element1.id) != undefined){
+    document.getElementById('t' + element1.id).innerHTML= element1.texte;
+  document.getElementById('r' + element1.id).innerHTML= element1.titre;
+}
+
+}
 
 
 /*function bulleDisparition(){
@@ -265,14 +291,6 @@ function openModal(){
         document.getElementById('overlay').style.transition = "500ms";
         document.getElementById('popup').style.transition = "500ms";                         
     }
-    function closeAvecOverlay(){
-        document.getElementById('overlay').style.opacity = "0";
-        document.getElementById('popup').style.opacity = "0";
-        document.getElementById('overlay').style.zIndex = "-1";
-        document.getElementById('popup').style.zIndex = "-2";
-        document.getElementById('overlay').style.transition = "500ms";
-        document.getElementById('popup').style.transition = "500ms";
-    }
 let idpopup = -1;
     function openModal1(e){    
       let idd = e.target.id;
@@ -301,12 +319,15 @@ let idpopup = -1;
     document.getElementById('overlay').style.opacity = "0";
     document.getElementById('popup').style.opacity = "0";
     document.getElementById('popup1').style.opacity = "0";
+    document.getElementById('popup2').style.opacity = "0";
     document.getElementById('overlay').style.zIndex = "-1";
     document.getElementById('popup').style.zIndex = "-2";
     document.getElementById('popup1').style.zIndex = "-2";
+    document.getElementById('popup2').style.zIndex = "-2";
     document.getElementById('overlay').style.transition = "500ms";
     document.getElementById('popup').style.transition = "500ms";
     document.getElementById('popup1').style.transition = "500ms";
+    document.getElementById('popup2').style.transition = "500ms";
 }
 
 function save(e){
@@ -343,7 +364,50 @@ function save(e){
 
 }
 
-    
+let idpopup2 = -1;
+    function openModal2(e){    
+      let id = e.target.id;
+      idpopup2 = id;
+      console.log(id);
+      let histoiree = histoires[indexhistoire(parseInt(id))];
+      console.log(histoiree);
+      document.getElementById('textpopup').value = histoiree.texte;
+      document.getElementById('titrepopup').value = histoiree.titre;
+
+      document.getElementById('overlay').style.opacity = "1";
+      document.getElementById('popup2').style.opacity = "1";
+      document.getElementById('overlay').style.zIndex = "102";
+      document.getElementById('popup2').style.zIndex = "110";
+      document.getElementById('overlay').style.transition = "500ms";
+      document.getElementById('popup2').style.transition = "500ms";     
+      
+  }
+
+  function save1(e){
+    histoires[indexhistoire(parseInt(idpopup2))].texte = document.getElementById('textpopup').value;
+    histoires[indexhistoire(parseInt(idpopup2))].titre = document.getElementById('titrepopup').value;
+
+  
+  
+    let histoire1 = histoires[indexhistoire(parseInt(idpopup2))];
+        document.getElementById('t' + idpopup2).innerHTML= histoire1.texte;
+        document.getElementById('r' + idpopup2).innerHTML= histoire1.titre;
+        document.getElementById('t' + idpopup2).style.display = "none";
+        localStorageSave2();
+  
+    document.getElementById('overlay').style.opacity = "0";
+    document.getElementById('popup2').style.opacity = "0";
+    document.getElementById('overlay').style.zIndex = "-2";
+    document.getElementById('popup2').style.zIndex = "-2";
+    document.getElementById('overlay').style.transition = "500ms";
+    document.getElementById('popup2').style.transition = "500ms";  
+
+    $(document).ready(function() {
+      $( "#onglets" ).tabs();
+    });
+  
+  }
+
 function BasculerVersListe(listeSource, listeDestination){
   for(i = 0; i < listeSource.length; i++){
     if (listeSource.options[i].selected){
@@ -435,3 +499,15 @@ searchBar.addEventListener('keyup', (e) => {
     }
     }
 
+
+function ajout(){
+document.getElementById('onglets').innerHTML += '<div id="onglet-' + idOnglet +'"><p id="t' + idOnglet +'"></p></div>';
+document.getElementById('onglet_ul').innerHTML += '<li><button class="bouton_onglet"><a id="r'+ idOnglet +'" href="#onglet-'+ idOnglet +'"><button id="'+ idOnglet +'" onclick=\'openModal2(event)\'>Modifier</button></a></button></li>';
+var titre = {id: idOnglet, titre: "", texte: ""};
+
+idOnglet++;
+histoires.push(titre);
+$(document).ready(function() {
+	$( "#onglets" ).tabs();
+});
+}
